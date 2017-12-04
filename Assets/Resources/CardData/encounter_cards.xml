@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EncounterCardTypeLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Library>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Rat Pack</Title>
+        <Attack>1</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="AddLearningEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <AddLearningEffect>
+              <LearningDelta>1</LearningDelta>
+            </AddLearningEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Black Cat</Title>
+        <Attack>1</Attack>
+        <CardEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Sickness</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </CardEffects>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="AddLearningEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <AddLearningEffect>
+              <LearningDelta>1</LearningDelta>
+            </AddLearningEffect>
+          </XmlAnythingOfICardEffect>
+          <XmlAnythingOfICardEffect type="AddActionEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <AddActionEffect>
+              <ActionDelta>1</ActionDelta>
+            </AddActionEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Wild Child</Title>
+        <Attack>1</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="DrawCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DrawCardEffect>
+              <NumberOfCards>1</NumberOfCards>
+            </DrawCardEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="DiscardRandomCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DiscardRandomCardEffect>
+              <NumberOfCards>1</NumberOfCards>
+            </DiscardRandomCardEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Starving Dog</Title>
+        <Attack>2</Attack>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="DestroyRandomCardInHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DestroyRandomCardInHandEffect>
+              <NumberOfCards>1</NumberOfCards>
+              <CardType>Action - Food</CardType>
+            </DestroyRandomCardInHandEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>        
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Rattlesnake</Title>
+        <Attack>2</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToHandEffect>
+              <CardName>Raw Meat</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToHandEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Venom</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Child Thief</Title>
+        <Attack>2</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="DrawCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DrawCardEffect>
+              <NumberOfCards>2</NumberOfCards>
+            </DrawCardEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="DiscardRandomCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DiscardRandomCardEffect>
+              <NumberOfCards>3</NumberOfCards>
+            </DiscardRandomCardEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Aligator</Title>
+        <Attack>3</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToHandEffect>
+              <CardName>Raw Meat</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToHandEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Infection</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>        
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Thief Gang</Title>
+        <Attack>5</Attack>
+        <CardEffects>
+          <XmlAnythingOfICardEffect type="DiscardRandomCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DiscardRandomCardEffect>
+              <NumberOfCards>1</NumberOfCards>
+            </DiscardRandomCardEffect>
+          </XmlAnythingOfICardEffect>
+        </CardEffects>        
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="DrawCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DrawCardEffect>
+              <NumberOfCards>2</NumberOfCards>
+            </DrawCardEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="DiscardRandomCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DiscardRandomCardEffect>
+              <NumberOfCards>2</NumberOfCards>
+            </DiscardRandomCardEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>   
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Doomsayer</Title>
+        <Attack>3</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToHandEffect>
+              <CardName>Getting Better</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToHandEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Small Fact</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Unexpected Assault</Title>
+        <Attack>2</Attack>
+        <CardEffects>
+          <XmlAnythingOfICardEffect type="DiscardRandomCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DiscardRandomCardEffect>
+              <NumberOfCards>1</NumberOfCards>
+              <CardType>Combat</CardType>
+            </DiscardRandomCardEffect>
+          </XmlAnythingOfICardEffect>
+        </CardEffects>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Heureka!</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>        
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Group of Scavengers</Title>
+        <Attack>7</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToHandEffect>
+              <CardName>Lunchmeat Can</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToHandEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="DestroyAllCardsInDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DestroyAllCardsInDeckEffect>
+              <CardType>Action - Food</CardType>
+            </DestroyAllCardsInDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Cannibal Tribe</Title>
+        <Attack>5</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToHandEffect>
+              <CardName>Raw Meat</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToHandEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="DestroyRandomCardInDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DestroyRandomCardInDeckEffect>
+              <CardType>Action</CardType>
+              <NumberOfCards>1</NumberOfCards>
+            </DestroyRandomCardInDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Brown Bear</Title>
+        <Attack>5</Attack>        
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Concussion</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>    
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Grizzly Bear</Title>
+        <Attack>7</Attack>        
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Concussion</CardName>
+              <NumberOfCards>3</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>    
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Feral Dog</Title>
+        <Attack>5</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Tamed Dog</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Death Adder</Title>
+        <Attack>3</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToHandEffect>
+              <CardName>Raw Meat</CardName>
+              <NumberOfCards>1</NumberOfCards>
+            </TakeToHandEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Venom</CardName>
+              <NumberOfCards>2</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Crack Dealer</Title>
+        <Attack>6</Attack>        
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="AddLearningEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <AddLearningEffect>
+              <LearningDelta>2</LearningDelta>
+            </AddLearningEffect>
+          </XmlAnythingOfICardEffect>
+          <XmlAnythingOfICardEffect type="DrawCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DrawCardEffect>
+              <NumberOfCards>1</NumberOfCards>
+            </DrawCardEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+      </WorldCardType>      
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Crazy Riddler</Title>
+        <Attack>7</Attack>
+        <CardEffects>
+          <XmlAnythingOfICardEffect type="PlayerCardBoolChainEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <PlayerCardBoolChainEffect>
+              <Text>Draw a card, if it's a &lt;i&gt;Action - Learning&lt;/i&gt; card, gain Attack +5.</Text>
+              <FirstEffect type="DrawCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <DrawCardEffect>
+                  <NumberOfCards>1</NumberOfCards>
+                </DrawCardEffect>
+              </FirstEffect>
+              <Condition type="PlayerCardTypeEnumerableCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <PlayerCardTypeEnumerableCondition>
+                  <CardType>Action - Learning</CardType>
+                </PlayerCardTypeEnumerableCondition>
+              </Condition>
+              <SecondEffect type="AddAttackEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <AddAttackEffect>
+                  <AttackDelta>5</AttackDelta>
+                </AddAttackEffect>
+              </SecondEffect>
+            </PlayerCardBoolChainEffect>
+          </XmlAnythingOfICardEffect>
+        </CardEffects>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Heureka!</CardName>
+              <NumberOfCards>2</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Epic Battle</Title>
+        <Attack>10</Attack>
+        <CardEffects>
+          <XmlAnythingOfICardEffect type="DrawCardEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DrawCardEffect>
+              <NumberOfCards>5</NumberOfCards>
+            </DrawCardEffect>
+          </XmlAnythingOfICardEffect>
+        </CardEffects>
+        <BurderEffects>
+          <XmlAnythingOfICardEffect type="DiscardAllCardsEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DiscardAllCardsEffect/>
+          </XmlAnythingOfICardEffect>          
+        </BurderEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Old Man With His Son</Title>
+        <Attack>4</Attack>
+        <BoonEffects>
+          <XmlAnythingOfICardEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TakeToDeckEffect>
+              <CardName>Depression</CardName>
+              <NumberOfCards>4</NumberOfCards>
+            </TakeToDeckEffect>
+          </XmlAnythingOfICardEffect>
+        </BoonEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Angry Mob</Title>
+        <Attack>6</Attack>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="CountChainEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <CountChainEffect>
+              <Text>Take 1 damage for each card in your hand.</Text>
+              <FirstEffect type="CardsInHandEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <CardsInHandEffect/>
+              </FirstEffect>
+              <SecondEffect type="TakeDamageEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <TakeDamageEffect/>
+              </SecondEffect>
+            </CountChainEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
+        <Title>Religious Cult</Title>
+        <Attack>8</Attack>
+        <BurdenEffects>
+          <XmlAnythingOfICardEffect type="CountBoolChainEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <CountBoolChainEffect>
+              <Text>If you own less than 30 cards, take 5 &lt;i&gt;Depression&lt;/i&gt;.</Text>
+              <FirstEffect type="CountCardsEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <CountCardsEffect/>
+              </FirstEffect>
+              <Condition type="LessThanCountableCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <LessThanCountableCondition>
+                  <Bound>30</Bound>
+                </LessThanCountableCondition>
+              </Condition>
+              <SecondEffect type="TakeToDeckEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <TakeToDeckEffect>
+                  <CardName>Depression</CardName>
+                  <NumberOfCards>5</NumberOfCards>
+                </TakeToDeckEffect>
+              </SecondEffect>
+            </CountBoolChainEffect>
+          </XmlAnythingOfICardEffect>
+        </BurdenEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+  </Library>
+</EncounterCardTypeLibrary>
