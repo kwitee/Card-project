@@ -2,7 +2,7 @@
 {
     public int AttackDelta;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         card.Owner.AddAttack(AttackDelta);
     }
@@ -12,7 +12,7 @@
         return string.Format("Attack {0}.", AttackDelta.ToStringWithPlus());
     }
 
-    public void Trigger(Card card, int quantity)
+    public void Trigger(OwnedCard card, int quantity)
     {
         AttackDelta = quantity;
         Trigger(card);

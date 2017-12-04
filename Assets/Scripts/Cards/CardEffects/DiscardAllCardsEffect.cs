@@ -5,7 +5,7 @@ public class DiscardAllCardsEffect : IPlayerCardTypeEnumerableInstantCardEffect
 {
     public string CardType;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         TriggerWithPlayerCardTypes(card);
     }
@@ -18,12 +18,12 @@ public class DiscardAllCardsEffect : IPlayerCardTypeEnumerableInstantCardEffect
             return string.Format("Discard all {0} cards.", CardType);
     }
 
-    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(Card card)
+    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card)
     {
         return card.Owner.Hand.DiscardAllCards(CardType);
     }
 
-    public int TriggerWithCount(Card card)
+    public int TriggerWithCount(OwnedCard card)
     {
         return TriggerWithPlayerCardTypes(card).Count();
     }

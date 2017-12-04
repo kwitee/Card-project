@@ -6,7 +6,7 @@
     public XmlAnything<ICountableCondition> Condition;
     public XmlAnything<IInstantCardEffect> SecondEffect;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         var count = FirstEffect.Value.TriggerWithCount(card);
 

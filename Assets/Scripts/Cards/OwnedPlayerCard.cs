@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerCard))]
 [RequireComponent(typeof(MovePlayerCard))]
-public class OwnedPlayerCard : Card
+public class OwnedPlayerCard : OwnedCard
 {
     public OwnedPlayerCardState State { get; set; }
     public PlayerCard PlayerCard { get; private set; }
@@ -14,7 +14,7 @@ public class OwnedPlayerCard : Card
     {
         PlayerCard = GetComponent<PlayerCard>();
         MovePlayerCard = GetComponent<MovePlayerCard>();
-        RegisterEvents();         
+        RegisterEvents();
     }
 
     private void RegisterEvents()

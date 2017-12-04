@@ -1,4 +1,4 @@
 ﻿public interface IQuantifiableInstantCardEffect : IInstantCardEffect
 {
-    void Trigger(Card card, int quantity);
+    void Trigger(OwnedCard card, int quantity);
 }

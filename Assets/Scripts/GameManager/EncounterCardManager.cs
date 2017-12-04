@@ -24,19 +24,20 @@ public sealed class EncounterCardManager : Singleton<EncounterCardManager>
     private EncounterDeckPrescription tierTwoDeckPrescription = null;
     private EncounterDeckPrescription tierThreeDeckPrescription = null;
 
-    public EncounterCard InstantiateRandomCard()
+    public OwnedEncounterCard InstantiateRandomCard()
     {
         var randomCard = deck[UnityEngine.Random.Range(0, deck.Count)];
         return InstantiateCard(randomCard);
     }
 
-    private EncounterCard InstantiateCard(EncounterCardType type)
+    private OwnedEncounterCard InstantiateCard(EncounterCardType type)
     {
         GameObject prefab = SelectPrefab(type);
-        var card = Instantiate(prefab).GetComponent<EncounterCard>();
-        card.Type = type;
-        card.UpdateText();
-        return card;
+        var instance = Instantiate(prefab);
+        var encounterCard = instance.GetComponent<EncounterCard>();
+        encounterCard.Type = type;
+        encounterCard.UpdateText();
+        return instance.AddComponent<OwnedEncounterCard>();
     }
 
     private GameObject SelectPrefab(EncounterCardType type)

@@ -7,12 +7,12 @@ public class CountCardsPlayedEffect : ICountableInstantCardEffect
         throw new NotSupportedException();
     }
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         throw new NotSupportedException();
     }
 
-    public int TriggerWithCount(Card card)
+    public int TriggerWithCount(OwnedCard card)
     {
         return card.Owner.GetNumberOfPlayedCards();
     }

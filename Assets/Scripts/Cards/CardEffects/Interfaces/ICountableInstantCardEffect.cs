@@ -1,6 +1,6 @@
 ﻿public interface ICountableInstantCardEffect : IInstantCardEffect
 {
-    int TriggerWithCount(Card card);    
+    int TriggerWithCount(OwnedCard card);    
 }
 
 public interface ICountableModifier

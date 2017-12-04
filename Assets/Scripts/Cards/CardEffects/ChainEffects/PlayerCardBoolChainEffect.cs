@@ -5,7 +5,7 @@
     public XmlAnything<IPlayerCardTypeEnumerableCondition> Condition;
     public XmlAnything<IInstantCardEffect> SecondEffect;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         if (Condition.Value.EvaluateCondition(FirstEffect.Value.TriggerWithPlayerCardTypes(card)))
             SecondEffect.Value.Trigger(card);

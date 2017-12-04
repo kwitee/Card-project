@@ -6,7 +6,7 @@ public class DiscardRandomCardEffect : IPlayerCardTypeEnumerableInstantCardEffec
     public int NumberOfCards;
     public string CardType;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         TriggerWithPlayerCardTypes(card);
     }
@@ -29,12 +29,12 @@ public class DiscardRandomCardEffect : IPlayerCardTypeEnumerableInstantCardEffec
         }
     }
 
-    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(Card card)
+    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card)
     {
         return card.Owner.Hand.DiscardRandomCard(NumberOfCards, CardType);
     }
 
-    public int TriggerWithCount(Card card)
+    public int TriggerWithCount(OwnedCard card)
     {
         return TriggerWithPlayerCardTypes(card).Count();
     }

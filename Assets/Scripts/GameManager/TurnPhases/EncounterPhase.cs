@@ -2,7 +2,7 @@
 
 public class EncounterPhase : InteractiveTurnPhase
 {
-    private EncounterCard card;
+    private OwnedEncounterCard card;
 
     public EncounterPhase(List<Player> players) : base(players)
     {
@@ -26,9 +26,9 @@ public class EncounterPhase : InteractiveTurnPhase
     {
         base.OnPhaseEnd();
 
-        if (card.Type is WorldCardType)
+        if (card.EncounterCard.Type is WorldCardType)
         {
-            var type = card.Type as WorldCardType;
+            var type = card.EncounterCard.Type as WorldCardType;
             var attackDiff = type.Attack - CurrentPlayer.GetAttack();
 
             if (attackDiff <= 0)

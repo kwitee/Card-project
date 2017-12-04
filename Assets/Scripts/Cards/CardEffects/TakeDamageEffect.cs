@@ -2,7 +2,7 @@
 {
     public int Damage;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         card.Owner.TakeDamage(Damage);
     }
@@ -15,7 +15,7 @@
             return string.Format("Heal {0}.", -Damage);
     }
 
-    public void Trigger(Card card, int quantity)
+    public void Trigger(OwnedCard card, int quantity)
     {
         Damage = quantity;
         Trigger(card);

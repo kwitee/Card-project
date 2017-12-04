@@ -6,7 +6,7 @@ public class DrawCardEffect : IQuantifiableInstantCardEffect, IPlayerCardTypeEnu
     public int NumberOfCards;
     public string CardType;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         TriggerWithPlayerCardTypes(card);
     }
@@ -29,18 +29,18 @@ public class DrawCardEffect : IQuantifiableInstantCardEffect, IPlayerCardTypeEnu
         }
     }
 
-    public void Trigger(Card card, int quantity)
+    public void Trigger(OwnedCard card, int quantity)
     {
         NumberOfCards = quantity;
         Trigger(card);
     }
 
-    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(Card card)
+    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card)
     {
         return card.Owner.DrawCards(NumberOfCards, CardType);
     }
 
-    public int TriggerWithCount(Card card)
+    public int TriggerWithCount(OwnedCard card)
     {
         return TriggerWithPlayerCardTypes(card).Count();
     }

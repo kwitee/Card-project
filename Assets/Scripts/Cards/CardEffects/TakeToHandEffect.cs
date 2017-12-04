@@ -3,7 +3,7 @@
     public string CardName;
     public int NumberOfCards;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         card.Owner.Hand.AddNewCard(CardName, NumberOfCards);
     }

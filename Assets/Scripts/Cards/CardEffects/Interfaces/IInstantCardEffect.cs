@@ -1,4 +1,4 @@
 ﻿public interface IInstantCardEffect : ICardEffect
 {
-    void Trigger(Card card);
+    void Trigger(OwnedCard card);
 }

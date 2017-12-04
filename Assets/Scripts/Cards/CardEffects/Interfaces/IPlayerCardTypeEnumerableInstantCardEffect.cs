@@ -3,7 +3,7 @@ using System.Linq;
 
 public interface IPlayerCardTypeEnumerableInstantCardEffect : ICountableInstantCardEffect
 {
-    IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(Card card);
+    IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card);
 }
 
 public interface IPlayerCardTypeEnumerableCondition

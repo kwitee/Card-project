@@ -5,7 +5,7 @@
     public XmlAnything<ICountableModifier> Modifier;
     public XmlAnything<IQuantifiableInstantCardEffect> SecondEffect;    
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         var count = FirstEffect.Value.TriggerWithCount(card);
 

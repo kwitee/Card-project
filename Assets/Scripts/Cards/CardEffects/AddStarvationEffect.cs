@@ -2,7 +2,7 @@
 {
     public int StarvationDelta;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         card.Owner.AddStarvation(StarvationDelta);
     }
@@ -12,7 +12,7 @@
         return string.Format("Starvation {0}.", StarvationDelta.ToStringWithPlus());
     }
 
-    public void Trigger(Card card, int quantity)
+    public void Trigger(OwnedCard card, int quantity)
     {
         StarvationDelta = quantity;
         Trigger(card);

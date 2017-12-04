@@ -6,7 +6,7 @@ public class DestroyRandomCardInDeckEffect : IPlayerCardTypeEnumerableInstantCar
     public int NumberOfCards;
     public string CardType;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         TriggerWithPlayerCardTypes(card);
     }
@@ -29,12 +29,12 @@ public class DestroyRandomCardInDeckEffect : IPlayerCardTypeEnumerableInstantCar
         }
     }
 
-    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(Card card)
+    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card)
     {
         return card.Owner.Deck.DestroyRandomCard(NumberOfCards, CardType);
     }
 
-    public int TriggerWithCount(Card card)
+    public int TriggerWithCount(OwnedCard card)
     {
         return TriggerWithPlayerCardTypes(card).Count();
     }

@@ -5,7 +5,7 @@ public class DestroyAllCardsInDeckEffect : IPlayerCardTypeEnumerableInstantCardE
 {
     public string CardType;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         TriggerWithPlayerCardTypes(card);
     }
@@ -18,12 +18,12 @@ public class DestroyAllCardsInDeckEffect : IPlayerCardTypeEnumerableInstantCardE
             return string.Format("Destroy all <i>{0}</i> cards in deck.", CardType);
     }
 
-    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(Card card)
+    public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card)
     {
         return card.Owner.Deck.DestroyAllCards(CardType);
     }
 
-    public int TriggerWithCount(Card card)
+    public int TriggerWithCount(OwnedCard card)
     {
         return TriggerWithPlayerCardTypes(card).Count();
     }

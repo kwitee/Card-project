@@ -1,25 +1,28 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Card : MonoBehaviour
 {
-    public Player Owner;
-    protected bool destroyed;
+    protected static readonly Color noImageColor = new Color(0f, 0f, 0f, 0f);
+    protected const string spritesPath = "Sprites/";
 
-    public virtual void Destroy()
-    {
-        destroyed = true;
-        Destroy(gameObject);
-    }
+    [SerializeField]
+    protected Image cardImage = null;
 
-    protected void ExecuteEffects(IEnumerable<XmlAnything<ICardEffect>> effects)
+    public abstract void UpdateText();
+
+    public void UpdateCardImage()
     {
-        foreach (var effect in effects)
+        if (cardImage != null)
         {
-            var effectValue = effect.Value;
+            var imageSprite = Resources.Load<Sprite>(spritesPath + CardImagePath);
 
-            if (effectValue is IInstantCardEffect)
-                (effectValue as IInstantCardEffect).Trigger(this);
+            if (imageSprite != null)
+                cardImage.sprite = imageSprite;
+            else
+                cardImage.color = noImageColor;
         }
     }
+
+    protected abstract string CardImagePath { get; }
 }

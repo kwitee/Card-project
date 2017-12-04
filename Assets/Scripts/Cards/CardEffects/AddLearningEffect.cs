@@ -2,7 +2,7 @@
 {
     public int LearningDelta;
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         card.Owner.AddLearning(LearningDelta);
     }
@@ -12,7 +12,7 @@
         return string.Format("Learning {0}.", LearningDelta.ToStringWithPlus());
     }
 
-    public void Trigger(Card card, int quantity)
+    public void Trigger(OwnedCard card, int quantity)
     {
         LearningDelta = quantity;
         Trigger(card);

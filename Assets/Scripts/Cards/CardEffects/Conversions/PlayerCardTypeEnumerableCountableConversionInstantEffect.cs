@@ -11,12 +11,12 @@ public class PlayerCardTypeEnumerableCountableConversionInstantEffect : ICountab
         return EffectToConvert.Value.GetText();
     }
 
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         EffectToConvert.Value.Trigger(card);
     }
 
-    public int TriggerWithCount(Card card)
+    public int TriggerWithCount(OwnedCard card)
     {
         return Conversion.Value.Convert(EffectToConvert.Value.TriggerWithPlayerCardTypes(card));
     }

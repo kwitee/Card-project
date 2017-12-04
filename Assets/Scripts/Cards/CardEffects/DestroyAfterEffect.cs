@@ -1,6 +1,6 @@
 ﻿public class DestroyAfterEffect : IInstantCardEffect
 {
-    public void Trigger(Card card)
+    public void Trigger(OwnedCard card)
     {
         card.Destroy();
     }
