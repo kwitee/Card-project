@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public static class Extensions
+﻿public static class Extensions
 {
     public static string ToStringWithPlus(this int value)
     {

@@ -26,15 +26,20 @@ public sealed class XmlAnything<T> : IXmlSerializable
     public void ReadXml(XmlReader reader)
     {
         if (!reader.HasAttributes)
-            throw new FormatException("expected a type attribute!");
+            throw new FormatException("Expected a type attribute!");
 
-        string type = reader.GetAttribute("type");
+        string typeText = reader.GetAttribute("type");
         reader.Read(); // consume the value
 
-        if (type == "null")
+        if (typeText == "null")
             return; // leave T at default value
 
-        XmlSerializer serializer = new XmlSerializer(Type.GetType(type));
+        var type = Type.GetType(typeText);
+
+        if (type == null)
+            throw new FormatException(string.Format("Type {0} is not recognized!", typeText));
+
+        var serializer = new XmlSerializer(type);
         Value = (T)serializer.Deserialize(reader);
         reader.ReadEndElement();
     }
