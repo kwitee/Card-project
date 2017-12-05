@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace CardProject.CardEffects.Instant.Conversions
 {
-    public class PlayerCardTypeEnumerableCountable : ICountableInstantCardEffect
+    public class PlayerCardTypeEnumerableCountable : ICountable
     {
-        public XmlAnything<IPlayerCardTypeEnumerableInstantCardEffect> EffectToConvert;
+        public XmlAnything<IPlayerCardTypeEnumerable> EffectToConvert;
         public XmlAnything<IPlayerCardTypeEnumerableCountableConversion> Conversion;
 
         public string GetText()

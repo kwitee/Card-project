@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CardProject.CardEffects.Instant;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class OwnedCard : MonoBehaviour
@@ -18,8 +19,8 @@ public class OwnedCard : MonoBehaviour
         {
             var effectValue = effect.Value;
 
-            if (effectValue is IInstantCardEffect)
-                (effectValue as IInstantCardEffect).Trigger(this);
+            if (effectValue is IInstant)
+                (effectValue as IInstant).Trigger(this);
         }
     }
 }
