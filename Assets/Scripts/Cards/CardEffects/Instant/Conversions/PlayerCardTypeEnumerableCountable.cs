@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CardProject.CardEffects.Instant.Conversions
+namespace CardProject.Cards.CardEffects.Instant.Conversions
 {
     public class PlayerCardTypeEnumerableCountable : ICountable
     {

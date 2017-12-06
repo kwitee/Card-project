@@ -1,4 +1,4 @@
-﻿namespace CardProject.CardEffects.Instant.Chain
+﻿namespace CardProject.Cards.CardEffects.Instant.Chain
 {
     public class CountBool : IInstant
     {

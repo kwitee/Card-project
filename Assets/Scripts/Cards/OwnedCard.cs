@@ -1,4 +1,5 @@
-﻿using CardProject.CardEffects.Instant;
+﻿using CardProject.Cards.CardEffects;
+using CardProject.Cards.CardEffects.Instant;
 using System.Collections.Generic;
 using UnityEngine;
 

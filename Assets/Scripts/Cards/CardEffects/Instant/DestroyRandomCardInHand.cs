@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CardProject.CardEffects.Instant
+namespace CardProject.Cards.CardEffects.Instant
 {
     public class DestroyRandomCardInHand : IPlayerCardTypeEnumerable
     {

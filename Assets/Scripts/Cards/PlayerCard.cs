@@ -1,4 +1,6 @@
-﻿public class PlayerCard : Card
+﻿using CardProject.Cards.CardTexts.Player;
+
+public class PlayerCard : Card
 {
     public PlayerCardType Type;
     public const float Width = 8f;

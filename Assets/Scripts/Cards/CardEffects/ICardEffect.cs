@@ -1,4 +1,7 @@
-﻿public interface ICardEffect
+﻿namespace CardProject.Cards.CardEffects
 {
-    string GetText();
+    public interface ICardEffect
+    {
+        string GetText();
+    }
 }

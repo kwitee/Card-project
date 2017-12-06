@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CardProject.Cards.CardEffects;
+using System.Collections.Generic;
 using System.Text;
 
 public abstract class EncounterCardType

@@ -1,4 +1,6 @@
-﻿public class EncounterCard : Card
+﻿using CardProject.Cards.CardTexts.Encounter;
+
+public class EncounterCard : Card
 {
     public EncounterCardType Type;
 

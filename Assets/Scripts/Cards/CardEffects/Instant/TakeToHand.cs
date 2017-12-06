@@ -1,4 +1,4 @@
-﻿namespace CardProject.CardEffects.Instant
+﻿namespace CardProject.Cards.CardEffects.Instant
 {
     public class TakeToHand : IInstant
     {
