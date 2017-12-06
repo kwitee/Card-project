@@ -1,27 +1,30 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(EncounterCard))]
-public class OwnedEncounterCard : OwnedCard
+namespace CardProject.Cards
 {
-    public EncounterCard EncounterCard { get; private set; }
-
-    public void Awake()
+    [RequireComponent(typeof(EncounterCard))]
+    public class OwnedEncounterCard : OwnedCard
     {
-        EncounterCard = GetComponent<EncounterCard>();
-    }
+        public EncounterCard EncounterCard { get; private set; }
 
-    public void Show()
-    {
-        ExecuteEffects(EncounterCard.Type.CardEffects);
-    }
+        public void Awake()
+        {
+            EncounterCard = GetComponent<EncounterCard>();
+        }
 
-    public void Boon()
-    {
-        ExecuteEffects(EncounterCard.Type.BoonEffects);
-    }
+        public void Show()
+        {
+            ExecuteEffects(EncounterCard.Type.CardEffects);
+        }
 
-    public void Burden()
-    {
-        ExecuteEffects(EncounterCard.Type.BurdenEffects);
+        public void Boon()
+        {
+            ExecuteEffects(EncounterCard.Type.BoonEffects);
+        }
+
+        public void Burden()
+        {
+            ExecuteEffects(EncounterCard.Type.BurdenEffects);
+        }
     }
 }

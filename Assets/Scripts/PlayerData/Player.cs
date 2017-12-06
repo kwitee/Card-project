@@ -1,4 +1,5 @@
-﻿using CardProject.Cards.CardTypes.PlayerCardTypes;
+﻿using CardProject.Cards;
+using CardProject.Cards.CardTypes.PlayerCardTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;

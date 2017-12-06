@@ -1,28 +1,31 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Card : MonoBehaviour
+namespace CardProject.Cards
 {
-    protected static readonly Color noImageColor = new Color(0f, 0f, 0f, 0f);
-    protected const string spritesPath = "Sprites/";
-
-    [SerializeField]
-    protected Image cardImage = null;
-
-    public abstract void UpdateText();
-
-    public void UpdateCardImage()
+    public abstract class Card : MonoBehaviour
     {
-        if (cardImage != null)
+        protected static readonly Color noImageColor = new Color(0f, 0f, 0f, 0f);
+        protected const string spritesPath = "Sprites/";
+
+        [SerializeField]
+        protected Image cardImage = null;
+
+        public abstract void UpdateText();
+
+        public void UpdateCardImage()
         {
-            var imageSprite = Resources.Load<Sprite>(spritesPath + CardImagePath);
+            if (cardImage != null)
+            {
+                var imageSprite = Resources.Load<Sprite>(spritesPath + CardImagePath);
 
-            if (imageSprite != null)
-                cardImage.sprite = imageSprite;
-            else
-                cardImage.color = noImageColor;
+                if (imageSprite != null)
+                    cardImage.sprite = imageSprite;
+                else
+                    cardImage.color = noImageColor;
+            }
         }
-    }
 
-    protected abstract string CardImagePath { get; }
+        protected abstract string CardImagePath { get; }
+    }
 }

@@ -4,25 +4,28 @@ using CardProject.PlayerData;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OwnedCard : MonoBehaviour
+namespace CardProject.Cards
 {
-    public Player Owner;
-    protected bool destroyed;
-
-    public virtual void Destroy()
+    public class OwnedCard : MonoBehaviour
     {
-        destroyed = true;
-        Destroy(gameObject);
-    }
+        public Player Owner;
+        protected bool destroyed;
 
-    protected void ExecuteEffects(IEnumerable<XmlAnything<ICardEffect>> effects)
-    {
-        foreach (var effect in effects)
+        public virtual void Destroy()
         {
-            var effectValue = effect.Value;
+            destroyed = true;
+            Destroy(gameObject);
+        }
 
-            if (effectValue is IInstant)
-                (effectValue as IInstant).Trigger(this);
+        protected void ExecuteEffects(IEnumerable<XmlAnything<ICardEffect>> effects)
+        {
+            foreach (var effect in effects)
+            {
+                var effectValue = effect.Value;
+
+                if (effectValue is IInstant)
+                    (effectValue as IInstant).Trigger(this);
+            }
         }
     }
 }

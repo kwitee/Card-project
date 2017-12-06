@@ -1,139 +1,143 @@
-﻿using UnityEngine;
+﻿using CardProject.GameLogic;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(PlayerCard))]
-[RequireComponent(typeof(MovePlayerCard))]
-public class OwnedPlayerCard : OwnedCard
+namespace CardProject.Cards
 {
-    public OwnedPlayerCardState State { get; set; }
-    public PlayerCard PlayerCard { get; private set; }
-    public MovePlayerCard MovePlayerCard { get; private set; }
-    public bool Selected { get; private set; }
-
-    public void Awake()
+    [RequireComponent(typeof(PlayerCard))]
+    [RequireComponent(typeof(MovePlayerCard))]
+    public class OwnedPlayerCard : OwnedCard
     {
-        PlayerCard = GetComponent<PlayerCard>();
-        MovePlayerCard = GetComponent<MovePlayerCard>();
-        RegisterEvents();
-    }
+        public OwnedPlayerCardState State { get; set; }
+        public PlayerCard PlayerCard { get; private set; }
+        public MovePlayerCard MovePlayerCard { get; private set; }
+        public bool Selected { get; private set; }
 
-    private void RegisterEvents()
-    {
-        var trigger = GetComponent<EventTrigger>();
-
-        var pcEntry = new EventTrigger.Entry();
-        pcEntry.eventID = EventTriggerType.PointerClick;
-        pcEntry.callback.AddListener((data) => { PointerClick(); });
-        trigger.triggers.Add(pcEntry);
-
-        var peEntry = new EventTrigger.Entry();
-        peEntry.eventID = EventTriggerType.PointerEnter;
-        peEntry.callback.AddListener((data) => { PointerEnter(); });
-        trigger.triggers.Add(peEntry);
-
-        var pexEntry = new EventTrigger.Entry();
-        pexEntry.eventID = EventTriggerType.PointerExit;
-        pexEntry.callback.AddListener((data) => { PointerExit(); });
-        trigger.triggers.Add(pexEntry);
-    }
-
-    public void Play()
-    {
-        if (GameManager.Instance.IsCardPlayable(this))
+        public void Awake()
         {
-            if (PlayerCard.Type.IsCardPlayable(Owner))
+            PlayerCard = GetComponent<PlayerCard>();
+            MovePlayerCard = GetComponent<MovePlayerCard>();
+            RegisterEvents();
+        }
+
+        private void RegisterEvents()
+        {
+            var trigger = GetComponent<EventTrigger>();
+
+            var pcEntry = new EventTrigger.Entry();
+            pcEntry.eventID = EventTriggerType.PointerClick;
+            pcEntry.callback.AddListener((data) => { PointerClick(); });
+            trigger.triggers.Add(pcEntry);
+
+            var peEntry = new EventTrigger.Entry();
+            peEntry.eventID = EventTriggerType.PointerEnter;
+            peEntry.callback.AddListener((data) => { PointerEnter(); });
+            trigger.triggers.Add(peEntry);
+
+            var pexEntry = new EventTrigger.Entry();
+            pexEntry.eventID = EventTriggerType.PointerExit;
+            pexEntry.callback.AddListener((data) => { PointerExit(); });
+            trigger.triggers.Add(pexEntry);
+        }
+
+        public void Play()
+        {
+            if (GameManager.Instance.IsCardPlayable(this))
             {
-                Owner.Hand.RemoveCard(this);
-                PlayerCard.Type.BeforePlay(Owner);
-                ExecuteEffects(PlayerCard.Type.OnPlayCardEffects);
+                if (PlayerCard.Type.IsCardPlayable(Owner))
+                {
+                    Owner.Hand.RemoveCard(this);
+                    PlayerCard.Type.BeforePlay(Owner);
+                    ExecuteEffects(PlayerCard.Type.OnPlayCardEffects);
 
-                if (Owner.IsCardCombo(PlayerCard.Type.Title))
-                    ExecuteEffects(PlayerCard.Type.OnComboCardEffects);
+                    if (Owner.IsCardCombo(PlayerCard.Type.Title))
+                        ExecuteEffects(PlayerCard.Type.OnComboCardEffects);
 
-                Owner.AddCardPlayed(PlayerCard.Type.Title);
-                Discard(false);
+                    Owner.AddCardPlayed(PlayerCard.Type.Title);
+                    Discard(false);
+                }
+                else
+                    GuiManager.Instance.ShowFadeOutText("You don't have enough Action!");
             }
             else
-                GuiManager.Instance.ShowFadeOutText("You don't have enough Action!");
+                GuiManager.Instance.ShowFadeOutText("Card's not playable in this phase!");
         }
-        else
-            GuiManager.Instance.ShowFadeOutText("Card's not playable in this phase!");
-    }
 
-    public void ExecuteDrawEffects()
-    {
-        ExecuteEffects(PlayerCard.Type.OnDrawCardEffects);
-    }
-
-    public void Discard(bool executeDiscardEffect = true)
-    {
-        Owner.Hand.RemoveCard(this);
-
-        if (!destroyed)
+        public void ExecuteDrawEffects()
         {
-            if (executeDiscardEffect)
-                ExecuteEffects(PlayerCard.Type.OnDiscardCardEffects);
+            ExecuteEffects(PlayerCard.Type.OnDrawCardEffects);
+        }
+
+        public void Discard(bool executeDiscardEffect = true)
+        {
+            Owner.Hand.RemoveCard(this);
 
             if (!destroyed)
             {
-                Selected = false;
-                Owner.Deck.AddCard(this);
-                State = OwnedPlayerCardState.InDeck;
+                if (executeDiscardEffect)
+                    ExecuteEffects(PlayerCard.Type.OnDiscardCardEffects);
+
+                if (!destroyed)
+                {
+                    Selected = false;
+                    Owner.Deck.AddCard(this);
+                    State = OwnedPlayerCardState.InDeck;
+                }
             }
         }
-    }
 
-    public void PointerClick()
-    {
-        switch (State)
+        public void PointerClick()
         {
-            case OwnedPlayerCardState.InHand:
-                Play();
-                break;
-            case OwnedPlayerCardState.InDeck:
-                Owner.ChangeStatisticsType();
-                break;
+            switch (State)
+            {
+                case OwnedPlayerCardState.InHand:
+                    Play();
+                    break;
+                case OwnedPlayerCardState.InDeck:
+                    Owner.ChangeStatisticsType();
+                    break;
+            }
+        }
+
+        public void PointerEnter()
+        {
+            switch (State)
+            {
+                case OwnedPlayerCardState.InHand:
+                    Selected = true;
+                    Owner.Hand.RefreshHand();
+                    break;
+                case OwnedPlayerCardState.InDeck:
+                    Owner.ShowCardStatistics();
+                    break;
+            }
+        }
+
+        public void PointerExit()
+        {
+            switch (State)
+            {
+                case OwnedPlayerCardState.InHand:
+                    Selected = false;
+                    Owner.Hand.RefreshHand();
+                    break;
+                case OwnedPlayerCardState.InDeck:
+                    Owner.HideCardStatistics();
+                    break;
+            }
+        }
+
+        public override void Destroy()
+        {
+            Owner.Hand.RemoveCard(this);
+            Owner.Deck.RemoveCard(this);
+            base.Destroy();
         }
     }
 
-    public void PointerEnter()
+    public enum OwnedPlayerCardState
     {
-        switch (State)
-        {
-            case OwnedPlayerCardState.InHand:
-                Selected = true;
-                Owner.Hand.RefreshHand();
-                break;
-            case OwnedPlayerCardState.InDeck:
-                Owner.ShowCardStatistics();
-                break;
-        }
+        InHand,
+        InDeck
     }
-
-    public void PointerExit()
-    {
-        switch (State)
-        {
-            case OwnedPlayerCardState.InHand:
-                Selected = false;
-                Owner.Hand.RefreshHand();
-                break;
-            case OwnedPlayerCardState.InDeck:
-                Owner.HideCardStatistics();
-                break;
-        }
-    }
-
-    public override void Destroy()
-    {
-        Owner.Hand.RemoveCard(this);
-        Owner.Deck.RemoveCard(this);
-        base.Destroy();
-    }
-}
-
-public enum OwnedPlayerCardState
-{
-    InHand,
-    InDeck
 }

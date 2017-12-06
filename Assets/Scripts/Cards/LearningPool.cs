@@ -1,70 +1,75 @@
-﻿using CardProject.Cards.CardTypes.PlayerCardTypes;
+﻿using CardProject.Cards.CardManagers;
+using CardProject.Cards.CardTypes.PlayerCardTypes;
+using CardProject.GameLogic;
 using System.Linq;
 using UnityEngine;
 
-public class LearningPool : Singleton<LearningPool>
+namespace CardProject.Cards
 {
-    [SerializeField]
-    private float scrollVelocity = 4f;
-
-    private bool visible = false;
-
-    public void Start()
+    public class LearningPool : Singleton<LearningPool>
     {
-        int i = 0;
+        [SerializeField]
+        private float scrollVelocity = 4f;
 
-        foreach (var card in PlayerCardManager.Instance.InstantiateLearningPoolCards(CardSet.Basic).OrderBy(a => a.PlayerCard.Type.GetTypeText()).ThenBy(card => card.PlayerCard.Type.LearningCost)
-            .ThenBy(card => card.PlayerCard.Type.Title))
+        private bool visible = false;
+
+        public void Start()
         {
-            card.transform.position = gameObject.transform.position + Vector3.right * i * PlayerCard.Width;
-            card.transform.parent = transform;
-            card.Hide();
-            i++;
-        }
-    }
+            int i = 0;
 
-    public void LearnCard(PlayerCardType type)
-    {
-        if (GameManager.Instance.CanLearn())
-        {
-            var player = GameManager.Instance.GetCurrentPlayer();
-
-            if ((player != null) && player.CanLearn(type.LearningCost))
+            foreach (var card in PlayerCardManager.Instance.InstantiateLearningPoolCards(CardSet.Basic).OrderBy(a => a.PlayerCard.Type.GetTypeText()).ThenBy(card => card.PlayerCard.Type.LearningCost)
+                .ThenBy(card => card.PlayerCard.Type.Title))
             {
-                player.Deck.AddNewCard(type.Title, 1);
-                player.AddLearning(-type.LearningCost);
+                card.transform.position = gameObject.transform.position + Vector3.right * i * PlayerCard.Width;
+                card.transform.parent = transform;
+                card.Hide();
+                i++;
+            }
+        }
+
+        public void LearnCard(PlayerCardType type)
+        {
+            if (GameManager.Instance.CanLearn())
+            {
+                var player = GameManager.Instance.GetCurrentPlayer();
+
+                if ((player != null) && player.CanLearn(type.LearningCost))
+                {
+                    player.Deck.AddNewCard(type.Title, 1);
+                    player.AddLearning(-type.LearningCost);
+                }
+                else
+                    GuiManager.Instance.ShowFadeOutText("You don't have enough Learning!");
             }
             else
-                GuiManager.Instance.ShowFadeOutText("You don't have enough Learning!");
+                GuiManager.Instance.ShowFadeOutText("Card's not learnable now!");
         }
-        else
-            GuiManager.Instance.ShowFadeOutText("Card's not learnable now!");
-    }
 
-    public void Update()
-    {
-        if (visible)
+        public void Update()
         {
-            var deltaScroll = Input.mouseScrollDelta.y * scrollVelocity;
+            if (visible)
+            {
+                var deltaScroll = Input.mouseScrollDelta.y * scrollVelocity;
+
+                foreach (var card in GetComponentsInChildren<LearningPoolPlayerCard>())
+                    card.Move(Vector3.right * deltaScroll);
+            }
+        }
+
+        public void Show()
+        {
+            visible = true;
+
+            foreach (var card in GetComponentsInChildren<LearningPoolPlayerCard>(true))
+                card.Show();
+        }
+
+        public void Hide()
+        {
+            visible = false;
 
             foreach (var card in GetComponentsInChildren<LearningPoolPlayerCard>())
-                card.Move(Vector3.right * deltaScroll);
+                card.Hide();
         }
-    }
-
-    public void Show()
-    {
-        visible = true;
-
-        foreach (var card in GetComponentsInChildren<LearningPoolPlayerCard>(true))
-            card.Show();
-    }
-
-    public void Hide()
-    {
-        visible = false;
-
-        foreach (var card in GetComponentsInChildren<LearningPoolPlayerCard>())
-            card.Hide();
     }
 }

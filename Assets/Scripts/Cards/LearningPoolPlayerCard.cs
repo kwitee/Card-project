@@ -1,42 +1,45 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(PlayerCard))]
-public class LearningPoolPlayerCard : MonoBehaviour
+namespace CardProject.Cards
 {
-    public PlayerCard PlayerCard { get; private set; }
-
-    public void Awake()
+    [RequireComponent(typeof(PlayerCard))]
+    public class LearningPoolPlayerCard : MonoBehaviour
     {
-        RegisterEvents();
-    }
+        public PlayerCard PlayerCard { get; private set; }
 
-    private void RegisterEvents()
-    {
-        PlayerCard = GetComponent<PlayerCard>();
-        var entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.PointerClick;
-        entry.callback.AddListener((data) => { PointerClick(); });
-        GetComponent<EventTrigger>().triggers.Add(entry);
-    }
+        public void Awake()
+        {
+            RegisterEvents();
+        }
 
-    public void PointerClick()
-    {
-        LearningPool.Instance.LearnCard(PlayerCard.Type);
-    }
+        private void RegisterEvents()
+        {
+            PlayerCard = GetComponent<PlayerCard>();
+            var entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.PointerClick;
+            entry.callback.AddListener((data) => { PointerClick(); });
+            GetComponent<EventTrigger>().triggers.Add(entry);
+        }
 
-    public void Show()
-    {
-        gameObject.SetActive(true);
-    }
+        public void PointerClick()
+        {
+            LearningPool.Instance.LearnCard(PlayerCard.Type);
+        }
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
 
-    public void Move(Vector3 position)
-    {
-        transform.position += position;
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void Move(Vector3 position)
+        {
+            transform.position += position;
+        }
     }
 }

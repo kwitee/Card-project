@@ -1,39 +1,42 @@
 ﻿using UnityEngine;
 
-public class MovePlayerCard : MonoBehaviour
+namespace CardProject.Cards
 {
-    private Vector3 fromPosition;
-    private Vector3 toPosition;
-    private bool move = false;
-    private bool rotate = false;
-
-    [SerializeField]
-    private float moveDistanceImprecision = 0.01f;
-
-    [SerializeField]
-    private float moveVelocity = 5f;
-
-    public void MoveTo(Vector3 position, bool rotateCard = false)
+    public class MovePlayerCard : MonoBehaviour
     {
-        rotate = rotateCard;
-        fromPosition = transform.position;
-        toPosition = position;
-        transform.position = fromPosition;
-        move = true;
-    }
+        private Vector3 fromPosition;
+        private Vector3 toPosition;
+        private bool move = false;
+        private bool rotate = false;
 
-    public void Update()
-    {
-        if (move)
+        [SerializeField]
+        private float moveDistanceImprecision = 0.01f;
+
+        [SerializeField]
+        private float moveVelocity = 5f;
+
+        public void MoveTo(Vector3 position, bool rotateCard = false)
         {
-            transform.position = Vector3.Lerp(transform.position, toPosition, moveVelocity * Time.deltaTime);
+            rotate = rotateCard;
+            fromPosition = transform.position;
+            toPosition = position;
+            transform.position = fromPosition;
+            move = true;
+        }
 
-            if (Vector3.Distance(transform.position, toPosition) <= moveDistanceImprecision)
+        public void Update()
+        {
+            if (move)
             {
-                move = false;
+                transform.position = Vector3.Lerp(transform.position, toPosition, moveVelocity * Time.deltaTime);
 
-                if (rotate)
-                    transform.Rotate(0, 180, 0);
+                if (Vector3.Distance(transform.position, toPosition) <= moveDistanceImprecision)
+                {
+                    move = false;
+
+                    if (rotate)
+                        transform.Rotate(0, 180, 0);
+                }
             }
         }
     }

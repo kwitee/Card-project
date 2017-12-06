@@ -1,18 +1,21 @@
 ﻿using CardProject.Cards.CardTexts.EncounterCardTexts;
 using CardProject.Cards.CardTypes.EncounterCardTypes;
 
-public class EncounterCard : Card
+namespace CardProject.Cards
 {
-    public EncounterCardType Type;
-
-    protected override string CardImagePath
+    public class EncounterCard : Card
     {
-        get { return Type.Title.ToLower().Replace(' ', '_'); }
-    }
+        public EncounterCardType Type;
 
-    public override void UpdateText()
-    {
-        foreach (var updateble in GetComponentsInChildren<IUpdatableEncounterCardText>())
-            updateble.UpdateText(Type);
+        protected override string CardImagePath
+        {
+            get { return Type.Title.ToLower().Replace(' ', '_'); }
+        }
+
+        public override void UpdateText()
+        {
+            foreach (var updateble in GetComponentsInChildren<IUpdatableEncounterCardText>())
+                updateble.UpdateText(Type);
+        }
     }
 }

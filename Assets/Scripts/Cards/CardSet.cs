@@ -1,4 +1,7 @@
-﻿public enum CardSet
+﻿namespace CardProject.Cards
 {
-    Basic
+    public enum CardSet
+    {
+        Basic
+    }
 }
