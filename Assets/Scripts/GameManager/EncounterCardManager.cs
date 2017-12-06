@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CardProject.Cards.CardTypes.EncounterCardTypes;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Xml.Serialization;
 using UnityEngine;
 

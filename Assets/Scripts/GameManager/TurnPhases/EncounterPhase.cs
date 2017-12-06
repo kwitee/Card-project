@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using CardProject.Cards.CardTypes.EncounterCardTypes;
+using CardProject.Cards.CardTypes.PlayerCardTypes;
+using CardProject.PlayerData;
+using System.Collections.Generic;
 
 public class EncounterPhase : InteractiveTurnPhase
 {

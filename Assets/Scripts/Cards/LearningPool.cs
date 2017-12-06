@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using CardProject.Cards.CardTypes.PlayerCardTypes;
+using System.Linq;
 using UnityEngine;
 
 public class LearningPool : Singleton<LearningPool>

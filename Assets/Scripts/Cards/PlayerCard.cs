@@ -1,4 +1,5 @@
-﻿using CardProject.Cards.CardTexts.Player;
+﻿using CardProject.Cards.CardTexts.PlayerCardTexts;
+using CardProject.Cards.CardTypes.PlayerCardTypes;
 
 public class PlayerCard : Card
 {

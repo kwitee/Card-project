@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EncounterCardTypeLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Library>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Rat Pack</Title>
         <Attack>1</Attack>
@@ -14,7 +14,7 @@
         </BoonEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Black Cat</Title>
         <Attack>1</Attack>
@@ -40,7 +40,7 @@
         </BoonEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Wild Child</Title>
         <Attack>1</Attack>
@@ -60,7 +60,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Starving Dog</Title>
         <Attack>2</Attack>
@@ -74,7 +74,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>        
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Rattlesnake</Title>
         <Attack>2</Attack>
@@ -96,7 +96,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Child Thief</Title>
         <Attack>2</Attack>
@@ -116,7 +116,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Aligator</Title>
         <Attack>3</Attack>
@@ -138,7 +138,7 @@
         </BurdenEffects>        
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Thief Gang</Title>
         <Attack>5</Attack>
@@ -165,7 +165,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>   
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Doomsayer</Title>
         <Attack>3</Attack>
@@ -187,7 +187,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Unexpected Assault</Title>
         <Attack>2</Attack>
@@ -209,7 +209,7 @@
         </BoonEffects>        
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Group of Scavengers</Title>
         <Attack>7</Attack>
@@ -230,7 +230,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Cannibal Tribe</Title>
         <Attack>5</Attack>
@@ -252,7 +252,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Brown Bear</Title>
         <Attack>5</Attack>        
@@ -266,7 +266,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>    
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Grizzly Bear</Title>
         <Attack>7</Attack>        
@@ -280,7 +280,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>    
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Feral Dog</Title>
         <Attack>5</Attack>
@@ -294,7 +294,7 @@
         </BoonEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Death Adder</Title>
         <Attack>3</Attack>
@@ -316,7 +316,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Crack Dealer</Title>
         <Attack>6</Attack>        
@@ -334,7 +334,7 @@
         </BoonEffects>
       </WorldCardType>      
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Crazy Riddler</Title>
         <Attack>7</Attack>
@@ -370,7 +370,7 @@
         </BoonEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Epic Battle</Title>
         <Attack>10</Attack>
@@ -388,7 +388,7 @@
         </BurderEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Old Man With His Son</Title>
         <Attack>4</Attack>
@@ -402,7 +402,7 @@
         </BoonEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Angry Mob</Title>
         <Attack>6</Attack>
@@ -421,7 +421,7 @@
         </BurdenEffects>
       </WorldCardType>
     </XmlAnythingOfEncounterCardType>
-    <XmlAnythingOfEncounterCardType type="WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
         <Title>Religious Cult</Title>
         <Attack>8</Attack>

@@ -1,4 +1,5 @@
-﻿using CardProject.Cards.CardTexts.Encounter;
+﻿using CardProject.Cards.CardTexts.EncounterCardTexts;
+using CardProject.Cards.CardTypes.EncounterCardTypes;
 
 public class EncounterCard : Card
 {
