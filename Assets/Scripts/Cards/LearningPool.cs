@@ -1,6 +1,8 @@
 ﻿using CardProject.Cards.CardManagers;
 using CardProject.Cards.CardTypes.PlayerCardTypes;
 using CardProject.GameLogic;
+using CardProject.Gui;
+using CardProject.Helpers;
 using System.Linq;
 using UnityEngine;
 

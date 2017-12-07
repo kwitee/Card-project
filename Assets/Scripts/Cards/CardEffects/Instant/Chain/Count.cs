@@ -1,4 +1,6 @@
-﻿namespace CardProject.Cards.CardEffects.Instant.Chain
+﻿using CardProject.Helpers;
+
+namespace CardProject.Cards.CardEffects.Instant.Chain
 {
     public class Count : IInstant
     {

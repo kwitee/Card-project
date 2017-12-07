@@ -1,7 +1,10 @@
-﻿public static class Extensions
+﻿namespace CardProject.Helpers
 {
-    public static string ToStringWithPlus(this int value)
+    public static class Extensions
     {
-        return value.ToString("+#;-#;0");
+        public static string ToStringWithPlus(this int value)
+        {
+            return value.ToString("+#;-#;0");
+        }
     }
 }

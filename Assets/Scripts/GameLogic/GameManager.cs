@@ -1,6 +1,8 @@
 ﻿using CardProject.Cards;
 using CardProject.Cards.CardManagers;
 using CardProject.GameLogic.TurnPhases;
+using CardProject.Gui;
+using CardProject.Helpers;
 using CardProject.PlayerData;
 using System.Collections;
 using System.Collections.Generic;

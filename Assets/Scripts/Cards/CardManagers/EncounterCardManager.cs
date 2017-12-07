@@ -1,6 +1,7 @@
 ﻿using CardProject.Cards.CardManagers.EncounterDeck;
 using CardProject.Cards.CardTypes.EncounterCardTypes;
 using CardProject.GameLogic;
+using CardProject.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;

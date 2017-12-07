@@ -1,23 +1,26 @@
 ﻿using System;
 using UnityEngine;
 
-public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+namespace CardProject.Helpers
 {
-    private static T instance;
-
-    public static T Instance
+    public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        get
+        private static T instance;
+
+        public static T Instance
         {
-            if (instance == null)
+            get
             {
-                instance = (T)FindObjectOfType(typeof(T));
-
                 if (instance == null)
-                    throw new Exception(string.Format("An instance of {0} is needed in the scene, but there is none.", typeof(T)));
-            }
+                {
+                    instance = (T)FindObjectOfType(typeof(T));
 
-            return instance;
+                    if (instance == null)
+                        throw new Exception(string.Format("An instance of {0} is needed in the scene, but there is none.", typeof(T)));
+                }
+
+                return instance;
+            }
         }
     }
 }

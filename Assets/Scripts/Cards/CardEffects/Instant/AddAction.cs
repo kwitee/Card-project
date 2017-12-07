@@ -1,4 +1,6 @@
-﻿namespace CardProject.Cards.CardEffects.Instant
+﻿using CardProject.Helpers;
+
+namespace CardProject.Cards.CardEffects.Instant
 {
     public class AddAction : IQuantifiable
     {
