@@ -14,8 +14,7 @@ namespace CardProject.Cards
 
         public virtual void Destroy()
         {
-            destroyed = true;
-            Destroy(gameObject);
+            destroyed = true;            
         }
 
         protected void ExecuteEffects(IEnumerable<XmlAnything<ICardEffect>> effects)

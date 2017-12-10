@@ -30,6 +30,7 @@ namespace CardProject.PlayerData
             {
                 var card = PlayerCardManager.Instance.InstantiateOwnedPlayerCard(title);
                 card.Owner = player;
+                card.gameObject.transform.rotation = player.Hand.GetHandQueaternion();
                 AddCard(card);
                 i++;
             }
@@ -38,7 +39,7 @@ namespace CardProject.PlayerData
         public virtual void AddCard(OwnedPlayerCard card)
         {
             collection.Add(card);
-            card.gameObject.transform.parent = transform;
+            card.gameObject.transform.parent = transform;            
         }
 
         public virtual void RemoveCard(OwnedPlayerCard card)

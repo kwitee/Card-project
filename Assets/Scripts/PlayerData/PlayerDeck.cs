@@ -31,7 +31,7 @@ namespace CardProject.PlayerData
         public override void AddCard(OwnedPlayerCard card)
         {
             base.AddCard(card);
-            card.MovePlayerCard.MoveTo(gameObject.transform.position, true);
+            AnimationQueue.Instance.AddAnimation(new Animation(card.gameObject, gameObject.transform.position, false, true, false, false));
             card.State = OwnedPlayerCardState.InDeck;
         }
     }

@@ -6,18 +6,16 @@ using UnityEngine.EventSystems;
 namespace CardProject.Cards
 {
     [RequireComponent(typeof(PlayerCard))]
-    [RequireComponent(typeof(MovePlayerCard))]
     public class OwnedPlayerCard : OwnedCard
     {
         public OwnedPlayerCardState State { get; set; }
         public PlayerCard PlayerCard { get; private set; }
-        public MovePlayerCard MovePlayerCard { get; private set; }
         public bool Selected { get; private set; }
+        private static readonly Vector3 showPosition = new Vector3(0, 0, -0.3f);
 
         public void Awake()
         {
             PlayerCard = GetComponent<PlayerCard>();
-            MovePlayerCard = GetComponent<MovePlayerCard>();
             RegisterEvents();
         }
 
@@ -47,6 +45,7 @@ namespace CardProject.Cards
             {
                 if (PlayerCard.Type.IsCardPlayable(Owner))
                 {
+                    AnimationQueue.Instance.AddAnimation(new Animation(gameObject, showPosition, false, false, false, false));
                     Owner.Hand.RemoveCard(this);
                     PlayerCard.Type.BeforePlay(Owner);
                     ExecuteEffects(PlayerCard.Type.OnPlayCardEffects);
@@ -55,7 +54,7 @@ namespace CardProject.Cards
                         ExecuteEffects(PlayerCard.Type.OnComboCardEffects);
 
                     Owner.AddCardPlayed(PlayerCard.Type.Title);
-                    Discard(false);
+                    MoveToDeck();
                 }
                 else
                     GuiManager.Instance.ShowFadeOutText("You don't have enough Action!");
@@ -69,21 +68,24 @@ namespace CardProject.Cards
             ExecuteEffects(PlayerCard.Type.OnDrawCardEffects);
         }
 
-        public void Discard(bool executeDiscardEffect = true)
+        public void Discard()
         {
             Owner.Hand.RemoveCard(this);
 
             if (!destroyed)
             {
-                if (executeDiscardEffect)
-                    ExecuteEffects(PlayerCard.Type.OnDiscardCardEffects);
+                ExecuteEffects(PlayerCard.Type.OnDiscardCardEffects);
+                MoveToDeck();
+            }
+        }
 
-                if (!destroyed)
-                {
-                    Selected = false;
-                    Owner.Deck.AddCard(this);
-                    State = OwnedPlayerCardState.InDeck;
-                }
+        public void MoveToDeck()
+        {
+            if (!destroyed)
+            {
+                Selected = false;
+                Owner.Deck.AddCard(this);
+                State = OwnedPlayerCardState.InDeck;
             }
         }
 
@@ -133,6 +135,8 @@ namespace CardProject.Cards
             Owner.Hand.RemoveCard(this);
             Owner.Deck.RemoveCard(this);
             base.Destroy();
+            var rotateBefore = (State == OwnedPlayerCardState.InDeck);
+            AnimationQueue.Instance.AddAnimation(new Animation(gameObject, showPosition, rotateBefore, false, false, false, true));
         }
     }
 

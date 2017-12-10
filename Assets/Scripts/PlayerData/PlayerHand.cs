@@ -25,17 +25,17 @@ namespace CardProject.PlayerData
 
         public IEnumerable<PlayerCardType> Draw(int number, PlayerDeck deck, string cardType = null)
         {
-            var drownCards = new List<PlayerCardType>();
+            var drownCards = new List<OwnedPlayerCard>();
 
             foreach (var card in deck.Draw(number, cardType))
             {
                 card.ExecuteDrawEffects();
                 AddCard(card);
-                drownCards.Add(card.PlayerCard.Type);
+                drownCards.Add(card);
             }
 
-            RefreshHand();
-            return drownCards;
+            RefreshHand(drownCards);
+            return drownCards.Select(card => card.PlayerCard.Type);
         }
 
         public override void RemoveCard(OwnedPlayerCard card)
@@ -59,7 +59,7 @@ namespace CardProject.PlayerData
                 if (discardOptions.Count == 0)
                     break;
 
-                var randomCard = discardOptions[UnityEngine.Random.Range(0, discardOptions.Count)];
+                var randomCard = discardOptions[Random.Range(0, discardOptions.Count)];
                 discardOptions.Remove(randomCard);
                 discardedTypes.Add(randomCard.PlayerCard.Type);
                 randomCard.Discard();
@@ -98,13 +98,25 @@ namespace CardProject.PlayerData
             card.State = OwnedPlayerCardState.InHand;
         }
 
-        public void RefreshHand()
+        private Vector3 HandVector
         {
-            var handVector = endPoint.position - startPoint.position;
-            var handDirection = handVector.normalized;
-            var perpHandDirection = Vector3.Cross(handDirection, Vector3.back);
-            var maxHandWidth = handVector.magnitude;
+            get { return endPoint.position - startPoint.position; }
+        }
 
+        private Vector3 HandDirection
+        {
+            get { return HandVector.normalized; }
+        }
+
+        public Quaternion GetHandQueaternion()
+        {
+            var perpHandDirection = Vector3.Cross(HandDirection, Vector3.back);
+            return Quaternion.FromToRotation(Vector3.up, perpHandDirection);
+        }
+
+        public void RefreshHand(IEnumerable<OwnedPlayerCard> drownCards = null)
+        {
+            var maxHandWidth = HandVector.magnitude;
             var neededHandWidth = (collection.Count - 1) * PlayerCard.Width;
             var cardMargin = 0f;
 
@@ -119,14 +131,14 @@ namespace CardProject.PlayerData
             for (int i = 0; i < collection.Count; i++)
             {
                 var newPosition = startPoint.position;
-                newPosition += handDirection * (mostLeft + (PlayerCard.Width * i) - (cardMargin * i));
-                newPosition += Vector3.forward * i * cardFrontMargin;
+                newPosition += HandDirection * (mostLeft + (PlayerCard.Width * i) - (cardMargin * i));
+                newPosition += Vector3.forward * i * cardFrontMargin;                
 
                 if (collection[i].Selected)
                     newPosition += Vector3.forward * highlightAmountFront + Vector3.up * highlightAmountUp;
 
-                collection[i].MovePlayerCard.MoveTo(newPosition);
-                collection[i].gameObject.transform.rotation = Quaternion.FromToRotation(Vector3.up, perpHandDirection);
+                var drownCard = (drownCards != null && drownCards.Contains(collection[i]));
+                AnimationQueue.Instance.AddAnimation(new Cards.Animation(collection[i].gameObject, newPosition, drownCard, false, !drownCard, !drownCard));
             }
         }
     }

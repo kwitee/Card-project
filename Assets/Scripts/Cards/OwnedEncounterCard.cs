@@ -26,5 +26,11 @@ namespace CardProject.Cards
         {
             ExecuteEffects(EncounterCard.Type.BurdenEffects);
         }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+            Destroy(gameObject);
+        }    
     }
 }
