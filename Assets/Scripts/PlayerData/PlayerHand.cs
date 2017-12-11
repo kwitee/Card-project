@@ -28,13 +28,16 @@ namespace CardProject.PlayerData
             var drownCards = new List<OwnedPlayerCard>();
 
             foreach (var card in deck.Draw(number, cardType))
-            {
-                card.ExecuteDrawEffects();
+            {                
                 AddCard(card);
                 drownCards.Add(card);
             }
 
             RefreshHand(drownCards);
+
+            foreach (var card in drownCards)            
+                card.ExecuteDrawEffects();            
+
             return drownCards.Select(card => card.PlayerCard.Type);
         }
 
