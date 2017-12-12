@@ -1,4 +1,5 @@
-﻿using CardProject.GameLogic;
+﻿using CardProject.Cards.CardEffects.Auras;
+using CardProject.GameLogic;
 using CardProject.Gui;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -44,16 +45,13 @@ namespace CardProject.Cards
             if (GameManager.Instance.IsCardPlayable(this))
             {
                 if (PlayerCard.Type.IsCardPlayable(Owner))
-                {
+                {                    
                     AnimationQueue.Instance.AddAnimation(new Animation(gameObject, showPosition, false, false, false, false));
                     Owner.Hand.RemoveCard(this);
                     PlayerCard.Type.BeforePlay(Owner);
-                    ExecuteEffects(PlayerCard.Type.OnPlayCardEffects);
-
-                    if (Owner.IsCardCombo(PlayerCard.Type.Title))
-                        ExecuteEffects(PlayerCard.Type.OnComboCardEffects);
-
-                    Owner.AddCardPlayed(PlayerCard.Type.Title);
+                    AuraCollection.Instance.TriggerEffects(TriggerEvent.CardPlayed, this);
+                    ExecutePlayEffects();
+                    Owner.AddCardPlayed(PlayerCard.Type.Title);                    
                     MoveToDeck();
                 }
                 else
@@ -61,6 +59,14 @@ namespace CardProject.Cards
             }
             else
                 GuiManager.Instance.ShowFadeOutText("Card's not playable in this phase!");
+        }
+
+        public void ExecutePlayEffects()
+        {
+            ExecuteEffects(PlayerCard.Type.OnPlayCardEffects);
+
+            if (Owner.IsCardCombo(PlayerCard.Type.Title))
+                ExecuteEffects(PlayerCard.Type.OnComboCardEffects);
         }
 
         public void ExecuteDrawEffects()
@@ -71,6 +77,7 @@ namespace CardProject.Cards
         public void Discard()
         {
             Owner.Hand.RemoveCard(this);
+            AuraCollection.Instance.TriggerEffects(TriggerEvent.CardDiscarded, this);
 
             if (!destroyed)
             {

@@ -1,4 +1,5 @@
 ﻿using CardProject.Cards;
+using CardProject.Cards.CardEffects.Auras;
 using CardProject.Cards.CardTypes.PlayerCardTypes;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,7 @@ namespace CardProject.PlayerData
             {                
                 AddCard(card);
                 drownCards.Add(card);
+                AuraCollection.Instance.TriggerEffects(TriggerEvent.CardDrown, card);
             }
 
             RefreshHand(drownCards);

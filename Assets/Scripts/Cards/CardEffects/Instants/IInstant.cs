@@ -20,7 +20,7 @@ namespace CardProject.Cards.CardEffects.Instants
         /// </summary>
         public OwnedCard Card { get; private set; }
         
-        public TriggerArgs(Player player, OwnedCard card)
+        public TriggerArgs(Player player, OwnedCard card = null)
         {
             if (player == null)
                 throw new ArgumentException("player cannot be null!");

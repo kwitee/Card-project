@@ -1,4 +1,5 @@
 ﻿using CardProject.Cards.CardEffects;
+using CardProject.Cards.CardEffects.Auras;
 using CardProject.Cards.CardEffects.Instants;
 using CardProject.Helpers;
 using CardProject.PlayerData;
@@ -25,6 +26,9 @@ namespace CardProject.Cards
 
                 if (effectValue is IInstant)
                     (effectValue as IInstant).Trigger(new TriggerArgs(Owner, this));
+
+                if (effectValue is Aura)
+                    (effectValue as Aura).Register(Owner);
             }
         }
     }

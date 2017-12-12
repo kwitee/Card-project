@@ -1,4 +1,5 @@
 ﻿using CardProject.Cards;
+using CardProject.Cards.CardEffects.Auras;
 using CardProject.PlayerData;
 using System.Collections.Generic;
 
@@ -32,6 +33,7 @@ namespace CardProject.GameLogic.TurnPhases
             base.OnPhaseEnd();
             GameManager.Instance.IncrementTurnCounter();
             GameManager.Instance.ChangeFirstPlayer();
+            AuraCollection.Instance.TurnEndUnregister();
         }
 
         protected override string GetPhaseText()

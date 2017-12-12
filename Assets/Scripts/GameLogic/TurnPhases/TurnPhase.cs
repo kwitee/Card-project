@@ -1,4 +1,5 @@
 ﻿using CardProject.Cards;
+using CardProject.Cards.CardEffects.Auras;
 using CardProject.Gui;
 using CardProject.PlayerData;
 using System.Collections.Generic;
@@ -41,6 +42,7 @@ namespace CardProject.GameLogic.TurnPhases
 
         protected virtual void OnPhaseEnd()
         {
+            AuraCollection.Instance.PhaseEndUnregister();
         }
 
         public virtual bool CanLearn()

@@ -16,6 +16,26 @@
     </XmlAnythingOfEncounterCardType>
     <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <WorldCardType>
+        <Title>Mosquitoes</Title>
+        <Attack>1</Attack>
+        <CardEffects>
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Auras.InstantAura, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <InstantAura>
+              <Text>You take 1 damage until end of the turn for every card you play.</Text>
+              <AutoUnregister>TurnEnd</AutoUnregister>
+              <TriggerEvent>CardPlayed</TriggerEvent>
+              <Effect type="CardProject.Cards.CardEffects.Instants.TakeDamage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <TakeDamage>
+                  <Damage>1</Damage>
+                </TakeDamage>
+              </Effect>
+            </InstantAura>
+          </XmlAnythingOfICardEffect>
+        </CardEffects>
+      </WorldCardType>
+    </XmlAnythingOfEncounterCardType>
+    <XmlAnythingOfEncounterCardType type="CardProject.Cards.CardTypes.EncounterCardTypes.WorldCardType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <WorldCardType>
         <Title>Black Cat</Title>
         <Attack>1</Attack>
         <CardEffects>
