@@ -2,9 +2,9 @@
 {
     public class ResetStarvation : IInstant
     {
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            card.Owner.ResetStarvation();
+            args.Player.ResetStarvation();
         }
 
         public string GetText()

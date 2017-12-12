@@ -6,9 +6,9 @@ namespace CardProject.Cards.CardEffects.Instant
     {
         public int AttackDelta;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            card.Owner.AddAttack(AttackDelta);
+            args.Player.AddAttack(AttackDelta);
         }
 
         public string GetText()
@@ -16,10 +16,10 @@ namespace CardProject.Cards.CardEffects.Instant
             return string.Format("Attack {0}.", AttackDelta.ToStringWithPlus());
         }
 
-        public void Trigger(OwnedCard card, int quantity)
+        public void Trigger(TriggerArgs args, int quantity)
         {
             AttackDelta = quantity;
-            Trigger(card);
+            Trigger(args);
         }
     }
 }

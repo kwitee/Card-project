@@ -6,9 +6,9 @@ namespace CardProject.Cards.CardEffects.Instant
     {
         public int StarvationDelta;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            card.Owner.AddStarvation(StarvationDelta);
+            args.Player.AddStarvation(StarvationDelta);
         }
 
         public string GetText()
@@ -16,10 +16,10 @@ namespace CardProject.Cards.CardEffects.Instant
             return string.Format("Starvation {0}.", StarvationDelta.ToStringWithPlus());
         }
 
-        public void Trigger(OwnedCard card, int quantity)
+        public void Trigger(TriggerArgs args, int quantity)
         {
             StarvationDelta = quantity;
-            Trigger(card);
+            Trigger(args);
         }
     }
 }

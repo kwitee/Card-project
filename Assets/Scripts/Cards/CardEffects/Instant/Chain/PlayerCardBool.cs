@@ -9,10 +9,10 @@ namespace CardProject.Cards.CardEffects.Instant.Chain
         public XmlAnything<IPlayerCardTypeEnumerableCondition> Condition;
         public XmlAnything<IInstant> SecondEffect;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            if (Condition.Value.EvaluateCondition(FirstEffect.Value.TriggerWithPlayerCardTypes(card)))
-                SecondEffect.Value.Trigger(card);
+            if (Condition.Value.EvaluateCondition(FirstEffect.Value.TriggerWithPlayerCardTypes(args)))
+                SecondEffect.Value.Trigger(args);
         }
 
         public string GetText()

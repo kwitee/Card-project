@@ -9,14 +9,14 @@ namespace CardProject.Cards.CardEffects.Instant
             throw new NotSupportedException();
         }
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
             throw new NotSupportedException();
         }
 
-        public int TriggerWithCount(OwnedCard card)
+        public int TriggerWithCount(TriggerArgs args)
         {
-            return card.Owner.GetNumberOfPlayedCards();
+            return args.Player.GetNumberOfPlayedCards();
         }
     }
 }

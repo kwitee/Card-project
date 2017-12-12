@@ -9,9 +9,9 @@ namespace CardProject.Cards.CardEffects.Instant
         public int NumberOfCards;
         public string CardType;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            TriggerWithPlayerCardTypes(card);
+            TriggerWithPlayerCardTypes(args);
         }
 
         public string GetText()
@@ -32,14 +32,14 @@ namespace CardProject.Cards.CardEffects.Instant
             }
         }
 
-        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card)
+        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(TriggerArgs args)
         {
-            return card.Owner.Hand.DestroyRandomCard(NumberOfCards, CardType);
+            return args.Player.Hand.DestroyRandomCard(NumberOfCards, CardType);
         }
 
-        public int TriggerWithCount(OwnedCard card)
+        public int TriggerWithCount(TriggerArgs args)
         {
-            return TriggerWithPlayerCardTypes(card).Count();
+            return TriggerWithPlayerCardTypes(args).Count();
         }
     }
 }

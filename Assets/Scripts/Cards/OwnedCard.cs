@@ -24,7 +24,7 @@ namespace CardProject.Cards
                 var effectValue = effect.Value;
 
                 if (effectValue is IInstant)
-                    (effectValue as IInstant).Trigger(this);
+                    (effectValue as IInstant).Trigger(new TriggerArgs(Owner, this));
             }
         }
     }

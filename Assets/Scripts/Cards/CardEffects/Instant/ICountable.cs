@@ -2,7 +2,7 @@
 {
     public interface ICountable : IInstant
     {
-        int TriggerWithCount(OwnedCard card);
+        int TriggerWithCount(TriggerArgs args);
     }
 
     public interface ICountableModifier

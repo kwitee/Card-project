@@ -9,14 +9,14 @@ namespace CardProject.Cards.CardEffects.Instant.Chain
         public XmlAnything<ICountableModifier> Modifier;
         public XmlAnything<IQuantifiable> SecondEffect;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            var count = FirstEffect.Value.TriggerWithCount(card);
+            var count = FirstEffect.Value.TriggerWithCount(args);
 
             if (Modifier != null)
                 count = Modifier.Value.ModifyCount(count);
 
-            SecondEffect.Value.Trigger(card, count);
+            SecondEffect.Value.Trigger(args, count);
         }
 
         public string GetText()

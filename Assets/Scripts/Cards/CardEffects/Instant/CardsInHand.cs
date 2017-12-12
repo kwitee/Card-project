@@ -12,19 +12,19 @@ namespace CardProject.Cards.CardEffects.Instant
             throw new NotSupportedException();
         }
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
             throw new NotSupportedException();
         }
 
-        public int TriggerWithCount(OwnedCard card)
+        public int TriggerWithCount(TriggerArgs args)
         {
-            return card.Owner.Hand.GetCards().Count();
+            return args.Player.Hand.GetCards().Count();
         }
 
-        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(OwnedCard card)
+        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(TriggerArgs args)
         {
-            return card.Owner.Hand.GetCards().Select(c => c.PlayerCard.Type);
+            return args.Player.Hand.GetCards().Select(c => c.PlayerCard.Type);
         }
     }
 }

@@ -5,9 +5,9 @@
         public string CardName;
         public int NumberOfCards;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            card.Owner.Deck.AddNewCard(CardName, NumberOfCards);
+            args.Player.Deck.AddNewCard(CardName, NumberOfCards);
         }
 
         public string GetText()

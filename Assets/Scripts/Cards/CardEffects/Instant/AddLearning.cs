@@ -6,9 +6,9 @@ namespace CardProject.Cards.CardEffects.Instant
     {
         public int LearningDelta;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            card.Owner.AddLearning(LearningDelta);
+            args.Player.AddLearning(LearningDelta);
         }
 
         public string GetText()
@@ -16,10 +16,10 @@ namespace CardProject.Cards.CardEffects.Instant
             return string.Format("Learning {0}.", LearningDelta.ToStringWithPlus());
         }
 
-        public void Trigger(OwnedCard card, int quantity)
+        public void Trigger(TriggerArgs args, int quantity)
         {
             LearningDelta = quantity;
-            Trigger(card);
+            Trigger(args);
         }
     }
 }

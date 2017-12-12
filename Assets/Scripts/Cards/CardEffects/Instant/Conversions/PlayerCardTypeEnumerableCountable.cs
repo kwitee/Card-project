@@ -15,14 +15,14 @@ namespace CardProject.Cards.CardEffects.Instant.Conversions
             return EffectToConvert.Value.GetText();
         }
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            EffectToConvert.Value.Trigger(card);
+            EffectToConvert.Value.Trigger(args);
         }
 
-        public int TriggerWithCount(OwnedCard card)
+        public int TriggerWithCount(TriggerArgs args)
         {
-            return Conversion.Value.Convert(EffectToConvert.Value.TriggerWithPlayerCardTypes(card));
+            return Conversion.Value.Convert(EffectToConvert.Value.TriggerWithPlayerCardTypes(args));
         }
     }
 

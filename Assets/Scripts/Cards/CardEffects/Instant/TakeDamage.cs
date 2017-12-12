@@ -4,9 +4,9 @@
     {
         public int Damage;
 
-        public void Trigger(OwnedCard card)
+        public void Trigger(TriggerArgs args)
         {
-            card.Owner.TakeDamage(Damage);
+            args.Player.TakeDamage(Damage);
         }
 
         public string GetText()
@@ -17,10 +17,10 @@
                 return string.Format("Heal {0}.", -Damage);
         }
 
-        public void Trigger(OwnedCard card, int quantity)
+        public void Trigger(TriggerArgs args, int quantity)
         {
             Damage = quantity;
-            Trigger(card);
+            Trigger(args);
         }
     }
 }
