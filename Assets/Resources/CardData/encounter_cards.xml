@@ -6,7 +6,7 @@
         <Title>Rat Pack</Title>
         <Attack>1</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.AddLearning, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.AddLearning, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <AddLearning>
               <LearningDelta>1</LearningDelta>
             </AddLearning>
@@ -19,7 +19,7 @@
         <Title>Black Cat</Title>
         <Attack>1</Attack>
         <CardEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Sickness</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -27,12 +27,12 @@
           </XmlAnythingOfICardEffect>
         </CardEffects>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.AddLearning, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.AddLearning, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <AddLearning>
               <LearningDelta>1</LearningDelta>
             </AddLearning>
           </XmlAnythingOfICardEffect>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.AddAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.AddAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <AddAction>
               <ActionDelta>1</ActionDelta>
             </AddAction>
@@ -45,14 +45,14 @@
         <Title>Wild Child</Title>
         <Attack>1</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DrawCard>
               <NumberOfCards>1</NumberOfCards>
             </DrawCard>
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DiscardRandomCard>
               <NumberOfCards>1</NumberOfCards>
             </DiscardRandomCard>
@@ -65,7 +65,7 @@
         <Title>Starving Dog</Title>
         <Attack>2</Attack>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DestroyRandomCardInHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DestroyRandomCardInHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DestroyRandomCardInHand>
               <NumberOfCards>1</NumberOfCards>
               <CardType>Action - Food</CardType>
@@ -79,7 +79,7 @@
         <Title>Rattlesnake</Title>
         <Attack>2</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToHand>
               <CardName>Raw Meat</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -87,7 +87,7 @@
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Venom</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -101,14 +101,14 @@
         <Title>Child Thief</Title>
         <Attack>2</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DrawCard>
               <NumberOfCards>2</NumberOfCards>
             </DrawCard>
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DiscardRandomCard>
               <NumberOfCards>3</NumberOfCards>
             </DiscardRandomCard>
@@ -121,7 +121,7 @@
         <Title>Aligator</Title>
         <Attack>3</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToHand>
               <CardName>Raw Meat</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -129,7 +129,7 @@
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Infection</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -143,21 +143,21 @@
         <Title>Thief Gang</Title>
         <Attack>5</Attack>
         <CardEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DiscardRandomCard>
               <NumberOfCards>1</NumberOfCards>
             </DiscardRandomCard>
           </XmlAnythingOfICardEffect>
         </CardEffects>        
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DrawCard>
               <NumberOfCards>2</NumberOfCards>
             </DrawCard>
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DiscardRandomCard>
               <NumberOfCards>2</NumberOfCards>
             </DiscardRandomCard>
@@ -170,7 +170,7 @@
         <Title>Doomsayer</Title>
         <Attack>3</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToHand>
               <CardName>Getting Better</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -178,7 +178,7 @@
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Small Fact</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -192,7 +192,7 @@
         <Title>Unexpected Assault</Title>
         <Attack>2</Attack>
         <CardEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DiscardRandomCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DiscardRandomCard>
               <NumberOfCards>1</NumberOfCards>
               <CardType>Combat</CardType>
@@ -200,7 +200,7 @@
           </XmlAnythingOfICardEffect>
         </CardEffects>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Heureka!</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -214,7 +214,7 @@
         <Title>Group of Scavengers</Title>
         <Attack>7</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToHand>
               <CardName>Lunchmeat Can</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -222,7 +222,7 @@
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DestroyAllCardsInDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DestroyAllCardsInDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DestroyAllCardsInDeck>
               <CardType>Action - Food</CardType>
             </DestroyAllCardsInDeck>
@@ -235,7 +235,7 @@
         <Title>Cannibal Tribe</Title>
         <Attack>5</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToHand>
               <CardName>Raw Meat</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -243,7 +243,7 @@
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DestroyRandomCardInDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DestroyRandomCardInDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DestroyRandomCardInDeck>
               <CardType>Action</CardType>
               <NumberOfCards>1</NumberOfCards>
@@ -257,7 +257,7 @@
         <Title>Brown Bear</Title>
         <Attack>5</Attack>        
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Concussion</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -271,7 +271,7 @@
         <Title>Grizzly Bear</Title>
         <Attack>7</Attack>        
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Concussion</CardName>
               <NumberOfCards>3</NumberOfCards>
@@ -285,7 +285,7 @@
         <Title>Feral Dog</Title>
         <Attack>5</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Tamed Dog</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -299,7 +299,7 @@
         <Title>Death Adder</Title>
         <Attack>3</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToHand>
               <CardName>Raw Meat</CardName>
               <NumberOfCards>1</NumberOfCards>
@@ -307,7 +307,7 @@
           </XmlAnythingOfICardEffect>
         </BoonEffects>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Venom</CardName>
               <NumberOfCards>2</NumberOfCards>
@@ -321,12 +321,12 @@
         <Title>Crack Dealer</Title>
         <Attack>6</Attack>        
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.AddLearning, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.AddLearning, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <AddLearning>
               <LearningDelta>2</LearningDelta>
             </AddLearning>
           </XmlAnythingOfICardEffect>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DrawCard>
               <NumberOfCards>1</NumberOfCards>
             </DrawCard>
@@ -339,20 +339,20 @@
         <Title>Crazy Riddler</Title>
         <Attack>7</Attack>
         <CardEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.Chain.PlayerCardBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.Chains.PlayerCardBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <PlayerCardBool>
               <Text>Draw a card, if it's a &lt;i&gt;Action - Learning&lt;/i&gt; card, gain Attack +5.</Text>
-              <FirstEffect type="CardProject.Cards.CardEffects.Instant.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <FirstEffect type="CardProject.Cards.CardEffects.Instants.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <DrawCard>
                   <NumberOfCards>1</NumberOfCards>
                 </DrawCard>
               </FirstEffect>
-              <Condition type="CardProject.Cards.CardEffects.Instant.PlayerCardTypeEnumerableCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <Condition type="CardProject.Cards.CardEffects.Instants.PlayerCardTypeEnumerableCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <PlayerCardTypeEnumerableCondition>
                   <CardType>Action - Learning</CardType>
                 </PlayerCardTypeEnumerableCondition>
               </Condition>
-              <SecondEffect type="CardProject.Cards.CardEffects.Instant.AddAttack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <SecondEffect type="CardProject.Cards.CardEffects.Instants.AddAttack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <AddAttack>
                   <AttackDelta>5</AttackDelta>
                 </AddAttack>
@@ -361,7 +361,7 @@
           </XmlAnythingOfICardEffect>
         </CardEffects>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Heureka!</CardName>
               <NumberOfCards>2</NumberOfCards>
@@ -375,14 +375,14 @@
         <Title>Epic Battle</Title>
         <Attack>10</Attack>
         <CardEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DrawCard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DrawCard>
               <NumberOfCards>5</NumberOfCards>
             </DrawCard>
           </XmlAnythingOfICardEffect>
         </CardEffects>
         <BurderEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.DiscardAllCards, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.DiscardAllCards, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <DiscardAllCards/>
           </XmlAnythingOfICardEffect>          
         </BurderEffects>
@@ -393,7 +393,7 @@
         <Title>Old Man With His Son</Title>
         <Attack>4</Attack>
         <BoonEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <TakeToDeck>
               <CardName>Depression</CardName>
               <NumberOfCards>4</NumberOfCards>
@@ -407,13 +407,13 @@
         <Title>Angry Mob</Title>
         <Attack>6</Attack>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.Chain.Count, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.Chains.Count, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <Count>
               <Text>Take 1 damage for each card in your hand.</Text>
-              <FirstEffect type="CardProject.Cards.CardEffects.Instant.CardsInHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <FirstEffect type="CardProject.Cards.CardEffects.Instants.CardsInHand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <CardsInHand/>
               </FirstEffect>
-              <SecondEffect type="CardProject.Cards.CardEffects.Instant.TakeDamage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <SecondEffect type="CardProject.Cards.CardEffects.Instants.TakeDamage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <TakeDamage/>
               </SecondEffect>
             </Count>
@@ -426,18 +426,18 @@
         <Title>Religious Cult</Title>
         <Attack>8</Attack>
         <BurdenEffects>
-          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instant.Chain.CountBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <XmlAnythingOfICardEffect type="CardProject.Cards.CardEffects.Instants.Chains.CountBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
             <CountBool>
               <Text>If you own less than 30 cards, take 5 &lt;i&gt;Depression&lt;/i&gt;.</Text>
-              <FirstEffect type="CardProject.Cards.CardEffects.Instant.CountCards, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <FirstEffect type="CardProject.Cards.CardEffects.Instants.CountCards, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <CountCards/>
               </FirstEffect>
-              <Condition type="CardProject.Cards.CardEffects.Instant.LessThanCountableCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <Condition type="CardProject.Cards.CardEffects.Instants.LessThanCountableCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <LessThanCountableCondition>
                   <Bound>30</Bound>
                 </LessThanCountableCondition>
               </Condition>
-              <SecondEffect type="CardProject.Cards.CardEffects.Instant.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+              <SecondEffect type="CardProject.Cards.CardEffects.Instants.TakeToDeck, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
                 <TakeToDeck>
                   <CardName>Depression</CardName>
                   <NumberOfCards>5</NumberOfCards>

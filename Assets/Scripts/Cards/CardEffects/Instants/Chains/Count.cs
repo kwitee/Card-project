@@ -1,6 +1,6 @@
 ﻿using CardProject.Helpers;
 
-namespace CardProject.Cards.CardEffects.Instant.Chain
+namespace CardProject.Cards.CardEffects.Instants.Chains
 {
     public class Count : IInstant
     {

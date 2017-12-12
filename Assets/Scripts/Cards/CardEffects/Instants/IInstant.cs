@@ -1,7 +1,7 @@
 ﻿using CardProject.PlayerData;
 using System;
 
-namespace CardProject.Cards.CardEffects.Instant
+namespace CardProject.Cards.CardEffects.Instants
 {
     public interface IInstant : ICardEffect
     {

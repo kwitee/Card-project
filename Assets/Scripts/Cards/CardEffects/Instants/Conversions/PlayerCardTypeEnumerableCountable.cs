@@ -3,7 +3,7 @@ using CardProject.Helpers;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CardProject.Cards.CardEffects.Instant.Conversions
+namespace CardProject.Cards.CardEffects.Instants.Conversions
 {
     public class PlayerCardTypeEnumerableCountable : ICountable
     {

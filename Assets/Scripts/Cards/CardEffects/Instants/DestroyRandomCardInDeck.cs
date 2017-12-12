@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CardProject.Cards.CardEffects.Instant
+namespace CardProject.Cards.CardEffects.Instants
 {
-    public class DrawCard : IQuantifiable, IPlayerCardTypeEnumerable
+    public class DestroyRandomCardInDeck : IPlayerCardTypeEnumerable
     {
         public int NumberOfCards;
         public string CardType;
@@ -19,28 +19,22 @@ namespace CardProject.Cards.CardEffects.Instant
             if (NumberOfCards == 1)
             {
                 if (CardType == null)
-                    return string.Format("Draw a card.");
+                    return string.Format("Destroy random card in deck.");
                 else
-                    return string.Format("Draw a <i>{0}</i> card.", CardType);
+                    return string.Format("Destroy random <i>{0}</i> card in deck.", CardType);
             }
             else
             {
                 if (CardType == null)
-                    return string.Format("Draw {0} cards.", NumberOfCards);
+                    return string.Format("Destroy {0} random cards in deck.", NumberOfCards);
                 else
-                    return string.Format("Draw {0} <i>{1}</i> cards.", NumberOfCards, CardType);
+                    return string.Format("Destroy {0} <i>{1}</i> random cards in deck.", NumberOfCards, CardType);
             }
-        }
-
-        public void Trigger(TriggerArgs args, int quantity)
-        {
-            NumberOfCards = quantity;
-            Trigger(args);
         }
 
         public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(TriggerArgs args)
         {
-            return args.Player.DrawCards(NumberOfCards, CardType);
+            return args.Player.Deck.DestroyRandomCard(NumberOfCards, CardType);
         }
 
         public int TriggerWithCount(TriggerArgs args)

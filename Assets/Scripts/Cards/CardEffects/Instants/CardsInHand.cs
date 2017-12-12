@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CardProject.Cards.CardEffects.Instant
+namespace CardProject.Cards.CardEffects.Instants
 {
     public class CardsInHand : IPlayerCardTypeEnumerable
     {

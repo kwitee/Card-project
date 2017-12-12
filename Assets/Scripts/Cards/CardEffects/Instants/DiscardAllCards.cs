@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CardProject.Cards.CardEffects.Instant
+namespace CardProject.Cards.CardEffects.Instants
 {
-    public class DestroyAllCardsInHand : IPlayerCardTypeEnumerable
+    public class DiscardAllCards : IPlayerCardTypeEnumerable
     {
         public string CardType;
 
@@ -16,14 +16,14 @@ namespace CardProject.Cards.CardEffects.Instant
         public string GetText()
         {
             if (CardType == null)
-                return string.Format("Destroy all cards in hand.");
+                return string.Format("Discard all cards.");
             else
-                return string.Format("Destroy all <i>{0}</i> cards in hand.", CardType);
+                return string.Format("Discard all {0} cards.", CardType);
         }
 
         public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(TriggerArgs args)
         {
-            return args.Player.Hand.DestroyAllCards(CardType);
+            return args.Player.Hand.DiscardAllCards(CardType);
         }
 
         public int TriggerWithCount(TriggerArgs args)

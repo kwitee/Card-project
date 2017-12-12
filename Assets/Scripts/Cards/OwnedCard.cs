@@ -1,5 +1,5 @@
 ﻿using CardProject.Cards.CardEffects;
-using CardProject.Cards.CardEffects.Instant;
+using CardProject.Cards.CardEffects.Instants;
 using CardProject.Helpers;
 using CardProject.PlayerData;
 using System.Collections.Generic;

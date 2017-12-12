@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CardProject.Cards.CardEffects.Instant
+namespace CardProject.Cards.CardEffects.Instants
 {
     public class CountCardsPlayed : ICountable
     {
