@@ -6,7 +6,7 @@ namespace CardProject.Cards.CardEffects.Instants
     {
         public int AttackDelta;
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             args.Player.AddAttack(AttackDelta);
         }
@@ -16,7 +16,7 @@ namespace CardProject.Cards.CardEffects.Instants
             return string.Format("Attack {0}.", AttackDelta.ToStringWithPlus());
         }
 
-        public void Trigger(TriggerArgs args, int quantity)
+        public void Trigger(InstantTriggerArgs args, int quantity)
         {
             AttackDelta = quantity;
             Trigger(args);

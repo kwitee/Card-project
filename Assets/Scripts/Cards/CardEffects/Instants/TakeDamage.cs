@@ -4,7 +4,7 @@
     {
         public int Damage;
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             args.Player.TakeDamage(Damage);
         }
@@ -17,7 +17,7 @@
                 return string.Format("Heal {0}.", -Damage);
         }
 
-        public void Trigger(TriggerArgs args, int quantity)
+        public void Trigger(InstantTriggerArgs args, int quantity)
         {
             Damage = quantity;
             Trigger(args);

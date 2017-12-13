@@ -25,7 +25,7 @@ namespace CardProject.Cards
                 var effectValue = effect.Value;
 
                 if (effectValue is IInstant)
-                    (effectValue as IInstant).Trigger(new TriggerArgs(Owner, this));
+                    (effectValue as IInstant).Trigger(new InstantTriggerArgs(Owner, this));
 
                 if (effectValue is Aura)
                     (effectValue as Aura).Register(Owner);

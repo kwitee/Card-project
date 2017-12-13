@@ -2,7 +2,7 @@
 {
     public class ResetStarvation : IInstant
     {
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             args.Player.ResetStarvation();
         }

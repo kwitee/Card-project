@@ -1,4 +1,5 @@
-﻿using CardProject.PlayerData;
+﻿using CardProject.Helpers;
+using CardProject.PlayerData;
 using System.Xml.Serialization;
 
 namespace CardProject.Cards.CardEffects.Auras
@@ -9,6 +10,7 @@ namespace CardProject.Cards.CardEffects.Auras
         public int AllowedNumberOfTriggers;
         public AutoUnregister AutoUnregister;
         public TriggerEvent TriggerEvent;
+        public XmlAnything<IAuraTriggerCondition> Condition;
 
         [XmlIgnore]
         public Player Player { get; private set; }
@@ -27,12 +29,19 @@ namespace CardProject.Cards.CardEffects.Auras
             AuraCollection.Instance.Unregister(this);
         }
 
-        public virtual void Trigger(OwnedPlayerCard card)
-        {
-            numberOfTrigers++;
+        public abstract void OnTrigger(AuraTriggerArgs args);
 
-            if (AllowedNumberOfTriggers > 0 && numberOfTrigers >= AllowedNumberOfTriggers)
-                Unregister();
+        public void Trigger(AuraTriggerArgs args)
+        {
+            if (Condition == null || Condition.Value.EvaluateCondition(args))
+            {
+                numberOfTrigers++;
+
+                if (AllowedNumberOfTriggers > 0 && numberOfTrigers >= AllowedNumberOfTriggers)
+                    Unregister();
+
+                OnTrigger(args);
+            }
         }
 
         public string GetText()
@@ -53,5 +62,15 @@ namespace CardProject.Cards.CardEffects.Auras
         CardPlayed,
         CardDiscarded,
         CardDrown
+    }
+
+    public class AuraTriggerArgs
+    {
+        public OwnedPlayerCard Card { get; private set; }
+
+        public AuraTriggerArgs(OwnedPlayerCard card)
+        {
+            Card = card;
+        }
     }
 }

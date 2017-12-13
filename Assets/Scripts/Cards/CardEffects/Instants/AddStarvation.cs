@@ -6,7 +6,7 @@ namespace CardProject.Cards.CardEffects.Instants
     {
         public int StarvationDelta;
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             args.Player.AddStarvation(StarvationDelta);
         }
@@ -16,7 +16,7 @@ namespace CardProject.Cards.CardEffects.Instants
             return string.Format("Starvation {0}.", StarvationDelta.ToStringWithPlus());
         }
 
-        public void Trigger(TriggerArgs args, int quantity)
+        public void Trigger(InstantTriggerArgs args, int quantity)
         {
             StarvationDelta = quantity;
             Trigger(args);

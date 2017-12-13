@@ -9,12 +9,12 @@ namespace CardProject.Cards.CardEffects.Instants
             throw new NotSupportedException();
         }
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             throw new NotSupportedException();
         }
 
-        public int TriggerWithCount(TriggerArgs args)
+        public int TriggerWithCount(InstantTriggerArgs args)
         {
             return args.Player.GetNumberOfPlayedCards();
         }

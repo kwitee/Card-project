@@ -5,10 +5,10 @@ namespace CardProject.Cards.CardEffects.Instants
 {
     public interface IInstant : ICardEffect
     {
-        void Trigger(TriggerArgs args);
+        void Trigger(InstantTriggerArgs args);
     }
 
-    public class TriggerArgs
+    public class InstantTriggerArgs
     {
         /// <summary>
         /// Player that triggered the event. Cannot be null. 
@@ -20,7 +20,7 @@ namespace CardProject.Cards.CardEffects.Instants
         /// </summary>
         public OwnedCard Card { get; private set; }
         
-        public TriggerArgs(Player player, OwnedCard card = null)
+        public InstantTriggerArgs(Player player, OwnedCard card = null)
         {
             if (player == null)
                 throw new ArgumentException("player cannot be null!");

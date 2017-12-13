@@ -8,7 +8,7 @@ namespace CardProject.Cards.CardEffects.Instants
     {
         public string CardType;
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             TriggerWithPlayerCardTypes(args);
         }
@@ -21,12 +21,12 @@ namespace CardProject.Cards.CardEffects.Instants
                 return string.Format("Destroy all <i>{0}</i> cards in deck.", CardType);
         }
 
-        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(TriggerArgs args)
+        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(InstantTriggerArgs args)
         {
             return args.Player.Deck.DestroyAllCards(CardType);
         }
 
-        public int TriggerWithCount(TriggerArgs args)
+        public int TriggerWithCount(InstantTriggerArgs args)
         {
             return TriggerWithPlayerCardTypes(args).Count();
         }

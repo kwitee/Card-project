@@ -2,10 +2,9 @@
 {
     public class DuplicateAura : Aura
     {
-        public override void Trigger(OwnedPlayerCard card)
+        public override void OnTrigger(AuraTriggerArgs args)
         {
-            base.Trigger(card);
-            card.ExecutePlayEffects();
+            args.Card.ExecutePlayEffects();
         }
     }
 }

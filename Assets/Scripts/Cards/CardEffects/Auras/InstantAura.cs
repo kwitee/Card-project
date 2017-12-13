@@ -7,10 +7,9 @@ namespace CardProject.Cards.CardEffects.Auras
     {
         public XmlAnything<IInstant> Effect;
 
-        public override void Trigger(OwnedPlayerCard card)
+        public override void OnTrigger(AuraTriggerArgs args)
         {
-            base.Trigger(card);
-            Effect.Value.Trigger(new TriggerArgs(Player));
+            Effect.Value.Trigger(new InstantTriggerArgs(Player));
         }
     }
 }

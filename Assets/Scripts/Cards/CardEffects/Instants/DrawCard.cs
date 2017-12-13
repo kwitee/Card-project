@@ -9,7 +9,7 @@ namespace CardProject.Cards.CardEffects.Instants
         public int NumberOfCards;
         public string CardType;
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             TriggerWithPlayerCardTypes(args);
         }
@@ -32,18 +32,18 @@ namespace CardProject.Cards.CardEffects.Instants
             }
         }
 
-        public void Trigger(TriggerArgs args, int quantity)
+        public void Trigger(InstantTriggerArgs args, int quantity)
         {
             NumberOfCards = quantity;
             Trigger(args);
         }
 
-        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(TriggerArgs args)
+        public IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(InstantTriggerArgs args)
         {
             return args.Player.DrawCards(NumberOfCards, CardType);
         }
 
-        public int TriggerWithCount(TriggerArgs args)
+        public int TriggerWithCount(InstantTriggerArgs args)
         {
             return TriggerWithPlayerCardTypes(args).Count();
         }

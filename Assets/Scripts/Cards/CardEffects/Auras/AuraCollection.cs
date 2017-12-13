@@ -21,7 +21,7 @@ namespace CardProject.Cards.CardEffects.Auras
         public void TriggerEffects(TriggerEvent triggerEvent, OwnedPlayerCard card)
         {
             foreach (var aura in collection.Where(aura => aura.Player == card.Owner && aura.TriggerEvent == triggerEvent).ToList())
-                aura.Trigger(card);
+                aura.Trigger(new AuraTriggerArgs(card));
         }
 
         public void PhaseEndUnregister()

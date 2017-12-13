@@ -2,6 +2,6 @@
 {
     public interface IQuantifiable : IInstant
     {
-        void Trigger(TriggerArgs args, int quantity);
+        void Trigger(InstantTriggerArgs args, int quantity);
     }
 }

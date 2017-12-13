@@ -9,7 +9,7 @@ namespace CardProject.Cards.CardEffects.Instants.Chains
         public XmlAnything<ICountableModifier> Modifier;
         public XmlAnything<IQuantifiable> SecondEffect;
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             var count = FirstEffect.Value.TriggerWithCount(args);
 

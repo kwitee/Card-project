@@ -6,7 +6,7 @@ namespace CardProject.Cards.CardEffects.Instants
 {
     public interface IPlayerCardTypeEnumerable : ICountable
     {
-        IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(TriggerArgs args);
+        IEnumerable<PlayerCardType> TriggerWithPlayerCardTypes(InstantTriggerArgs args);
     }
 
     public interface IPlayerCardTypeEnumerableCondition

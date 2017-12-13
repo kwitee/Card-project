@@ -5,7 +5,7 @@
         public string CardName;
         public int NumberOfCards;
 
-        public void Trigger(TriggerArgs args)
+        public void Trigger(InstantTriggerArgs args)
         {
             args.Player.Hand.AddNewCard(CardName, NumberOfCards);
         }
