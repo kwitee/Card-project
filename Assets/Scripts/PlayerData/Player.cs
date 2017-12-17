@@ -141,6 +141,7 @@ namespace CardProject.PlayerData
         {
             AddValueWithMinMaxCheck(ref currentAction, delta, minAction, maxAction);
             UpdateGUI();
+            Hand.RefreshHightlight();
         }
 
         public void ResetAction()

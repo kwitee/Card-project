@@ -42,23 +42,44 @@ namespace CardProject.Cards
 
         public void Play()
         {
+            string unplayableReason;
+
+            if (IsCardPlayable(out unplayableReason))
+            {                 
+                AnimationQueue.Instance.AddAnimation(new Animation(gameObject, showPosition, false, false, false, false));
+                Owner.Hand.RemoveCard(this);
+                PlayerCard.Type.BeforePlay(Owner);
+                AuraCollection.Instance.TriggerEffects(TriggerEvent.CardPlayed, this);
+                ExecutePlayEffects();
+                Owner.AddCardPlayed(PlayerCard.Type.Title);                    
+                MoveToDeck();
+            }
+            else
+                GuiManager.Instance.ShowFadeOutText(unplayableReason);
+        }
+
+        private bool IsCardPlayable(out string unplayableReason)
+        {
             if (GameManager.Instance.IsCardPlayable(this))
             {
                 if (PlayerCard.Type.IsCardPlayable(Owner))
-                {                    
-                    AnimationQueue.Instance.AddAnimation(new Animation(gameObject, showPosition, false, false, false, false));
-                    Owner.Hand.RemoveCard(this);
-                    PlayerCard.Type.BeforePlay(Owner);
-                    AuraCollection.Instance.TriggerEffects(TriggerEvent.CardPlayed, this);
-                    ExecutePlayEffects();
-                    Owner.AddCardPlayed(PlayerCard.Type.Title);                    
-                    MoveToDeck();
+                {
+                    unplayableReason = string.Empty;
+                    return true;
                 }
                 else
-                    GuiManager.Instance.ShowFadeOutText("You don't have enough Action!");
+                    unplayableReason = "You don't have enough Action!";
             }
             else
-                GuiManager.Instance.ShowFadeOutText("Card's not playable in this phase!");
+                unplayableReason = "Card's not playable in this phase!";
+
+            return false;
+        }
+
+        public bool IsCardPlayable()
+        {
+            string unplayableReason;
+            return IsCardPlayable(out unplayableReason);
         }
 
         public void ExecutePlayEffects()
@@ -78,6 +99,7 @@ namespace CardProject.Cards
         {
             Owner.Hand.RemoveCard(this);
             AuraCollection.Instance.TriggerEffects(TriggerEvent.CardDiscarded, this);
+            PlayerCard.ChangeHighlightPlayable(false);
 
             if (!destroyed)
             {
@@ -88,6 +110,8 @@ namespace CardProject.Cards
 
         public void MoveToDeck()
         {
+            PlayerCard.ChangeHighlightPlayable(false);
+
             if (!destroyed)
             {
                 Selected = false;

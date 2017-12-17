@@ -83,7 +83,7 @@ namespace CardProject.GameLogic
 
         private IEnumerator GameStart()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(5);
             ChangeCurrentTurnPhase(drawPhase);
         }
 
@@ -94,6 +94,9 @@ namespace CardProject.GameLogic
 
             currentTurnPhase = newPhase;
             currentTurnPhase.ActivatePhase();
+
+            foreach (var player in players)
+                player.Hand.RefreshHightlight();
         }
 
         public bool IsCardPlayable(OwnedPlayerCard card)

@@ -19,10 +19,10 @@ namespace CardProject.PlayerData
         private float cardFrontMargin = -0.1f;
 
         [SerializeField]
-        private float highlightAmountFront = -0.3f;
+        private float selectAmountFront = -0.3f;
 
         [SerializeField]
-        private float highlightAmountUp = 0.4f;
+        private float selectAmountUp = 0.4f;
 
         public IEnumerable<PlayerCardType> Draw(int number, PlayerDeck deck, string cardType = null)
         {
@@ -36,6 +36,7 @@ namespace CardProject.PlayerData
             }
 
             RefreshHand(drownCards);
+            RefreshHightlight();
 
             foreach (var card in drownCards)            
                 card.ExecuteDrawEffects();            
@@ -140,11 +141,17 @@ namespace CardProject.PlayerData
                 newPosition += Vector3.forward * i * cardFrontMargin;                
 
                 if (collection[i].Selected)
-                    newPosition += Vector3.forward * highlightAmountFront + Vector3.up * highlightAmountUp;
+                    newPosition += Vector3.forward * selectAmountFront + Vector3.up * selectAmountUp;
 
                 var drownCard = (drownCards != null && drownCards.Contains(collection[i]));
                 AnimationQueue.Instance.AddAnimation(new Cards.Animation(collection[i].gameObject, newPosition, drownCard, false, !drownCard, !drownCard));
             }
+        }
+
+        public void RefreshHightlight()
+        {
+            foreach (var card in collection)            
+                card.PlayerCard.ChangeHighlightPlayable(card.IsCardPlayable());           
         }
     }
 }
