@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="105mm"
+   height="145mm"
+   viewBox="0 0 105 145"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="card_highlight.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:export-filename="D:\Dokumenty\Programy\Card project\Art\card_templates\card_highlight_learn.png"
+   inkscape:export-xdpi="508"
+   inkscape:export-ydpi="508">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="348.58445"
+     inkscape:cy="378.2532"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     guidetolerance="20"
+     objecttolerance="20"
+     inkscape:snap-tangential="false"
+     inkscape:snap-perpendicular="false"
+     inkscape:measure-start="5.66237,523.415"
+     inkscape:measure-end="0,0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     gridtolerance="10" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-152)"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#d3f2ff;fill-opacity:1;stroke:#000000;stroke-width:2.99699998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4510"
+       width="97.002518"
+       height="137.00252"
+       x="3.9987419"
+       y="155.99873"
+       ry="4.5429759"
+       inkscape:export-xdpi="508"
+       inkscape:export-ydpi="508" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 5.6873034,166.57201 c 0,-7.01959 0.065481,-7.49434 1.155446,-8.37725 0.5045336,-0.40869 1.356524,-0.45776 8.0388256,-0.46302 l 7.474479,-0.006 v 7.8052 7.80521 H 14.021679 5.6873034 Z"
+       id="path933"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="508"
+       inkscape:export-ydpi="508" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <rect
+       style="display:inline;fill:none;fill-opacity:1;stroke:#017015;stroke-width:3.125;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4510-5"
+       width="101.87453"
+       height="141.87453"
+       x="1.5625"
+       y="1.562973"
+       ry="4.7045307"
+       inkscape:export-xdpi="508"
+       inkscape:export-ydpi="508" />
+  </g>
+</svg>
