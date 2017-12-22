@@ -62,6 +62,7 @@ namespace CardProject.PlayerData
 
         public PlayerHand Hand;
         public PlayerDeck Deck;
+        public LearningPool LearningPool;
 
         public IEnumerable<PlayerCardType> DrawCards(int numberOfCards, string cardType = null)
         {

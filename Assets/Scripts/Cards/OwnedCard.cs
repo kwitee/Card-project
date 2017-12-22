@@ -10,7 +10,7 @@ namespace CardProject.Cards
 {
     public class OwnedCard : MonoBehaviour
     {
-        public Player Owner;
+        public Player Owner { get; set; }
         protected bool destroyed;
 
         public virtual void Destroy()

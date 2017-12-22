@@ -130,6 +130,22 @@ namespace CardProject.Gui
             GameManager.Instance.EndPhaseClick();
         }
 
+        public void ShowLearningPoolButtonClick()
+        {
+            var currentPlayer = GameManager.Instance.GetCurrentPlayer();
+
+            if (currentPlayer != null)
+                currentPlayer.LearningPool.Show();
+        }
+
+        public void HideLearningPoolButtonClick()
+        {
+            var currentPlayer = GameManager.Instance.GetCurrentPlayer();
+
+            if (currentPlayer != null)
+                currentPlayer.LearningPool.Hide();
+        }
+
         public void ShowPlayerStatistics(string statistics)
         {
             playerStatisticsText.text = statistics;

@@ -29,9 +29,10 @@ namespace CardProject.GameLogic.TurnPhases
             base.OnPhaseStart();
 
             foreach (var player in players)
+            {
                 player.AddAction(1);
-
-            LearningPool.Instance.Show();
+                player.LearningPool.Show();
+            }
         }
 
         protected override void OnPhaseEnd()
@@ -39,9 +40,10 @@ namespace CardProject.GameLogic.TurnPhases
             base.OnPhaseEnd();
 
             foreach (var player in players)
+            {
                 player.ResetAction();
-
-            LearningPool.Instance.Hide();
+                player.LearningPool.Hide();
+            }
         }
 
         public override bool CanLearn()

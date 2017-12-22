@@ -7,6 +7,7 @@ namespace CardProject.Cards
     public class LearningPoolPlayerCard : MonoBehaviour
     {
         public PlayerCard PlayerCard { get; private set; }
+        public LearningPool LearningPool { get; set; }
 
         public void Awake()
         {
@@ -24,7 +25,7 @@ namespace CardProject.Cards
 
         public void PointerClick()
         {
-            LearningPool.Instance.LearnCard(PlayerCard.Type);
+            LearningPool.LearnCard(PlayerCard.Type);
         }
 
         public void Show()
@@ -37,9 +38,14 @@ namespace CardProject.Cards
             gameObject.SetActive(false);
         }
 
+        public bool IsVisible()
+        {
+            return gameObject.activeInHierarchy;
+        }
+
         public void Move(Vector3 position)
         {
-            transform.position += position;
+            transform.position = position;
         }
     }
 }

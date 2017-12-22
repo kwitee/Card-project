@@ -109,11 +109,17 @@ namespace CardProject.PlayerData
             get { return endPoint.position - startPoint.position; }
         }
 
-        private Vector3 HandDirection
+        /// <summary>
+        /// Normalized vector of direction of hand card sequence. 
+        /// </summary>
+        public Vector3 HandDirection
         {
             get { return HandVector.normalized; }
         }
 
+        /// <summary>
+        /// Quaternion of player card rotation. 
+        /// </summary>
         public Quaternion GetHandQueaternion()
         {
             var perpHandDirection = Vector3.Cross(HandDirection, Vector3.back);
