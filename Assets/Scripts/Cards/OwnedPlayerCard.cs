@@ -12,7 +12,6 @@ namespace CardProject.Cards
         public OwnedPlayerCardState State { get; set; }
         public PlayerCard PlayerCard { get; private set; }
         public bool Selected { get; private set; }
-        private static readonly Vector3 showPosition = new Vector3(0, 0, -0.3f);
 
         public void Awake()
         {
@@ -46,7 +45,7 @@ namespace CardProject.Cards
 
             if (IsCardPlayable(out unplayableReason))
             {                 
-                AnimationQueue.Instance.AddAnimation(new Animation(gameObject, showPosition, false, false, false, false));
+                AnimationQueue.Instance.AddAnimation(new Animation(gameObject, Owner.CardShowPosition.position, false, false, false, false));
                 Owner.Hand.RemoveCard(this);
                 PlayerCard.Type.BeforePlay(Owner);
                 AuraCollection.Instance.TriggerEffects(TriggerEvent.CardPlayed, this);
@@ -167,7 +166,7 @@ namespace CardProject.Cards
             Owner.Deck.RemoveCard(this);
             base.Destroy();
             var rotateBefore = (State == OwnedPlayerCardState.InDeck);
-            AnimationQueue.Instance.AddAnimation(new Animation(gameObject, showPosition, rotateBefore, false, false, false, true));
+            AnimationQueue.Instance.AddAnimation(new Animation(gameObject, Owner.CardShowPosition.position, rotateBefore, false, false, false, true));
         }
     }
 

@@ -63,6 +63,8 @@ namespace CardProject.PlayerData
         public PlayerHand Hand;
         public PlayerDeck Deck;
         public LearningPool LearningPool;
+        public Transform CardShowPosition;
+        public Transform EncounterCardPosition;
 
         public IEnumerable<PlayerCardType> DrawCards(int numberOfCards, string cardType = null)
         {

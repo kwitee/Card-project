@@ -26,6 +26,7 @@ namespace CardProject.GameLogic.TurnPhases
 
             card = EncounterCardManager.Instance.InstantiateRandomCard();
             card.Owner = CurrentPlayer;
+            card.gameObject.transform.position = CurrentPlayer.EncounterCardPosition.transform.position;
             card.Show();
         }
 
