@@ -24,8 +24,12 @@ namespace CardProject.PlayerData
         [SerializeField]
         private float selectAmountUp = 0.4f;
 
+        [SerializeField]
+        private int handLimit = 10;
+
         public IEnumerable<PlayerCardType> Draw(int number, PlayerDeck deck, string cardType = null)
         {
+            number = RestrictAddNumber(number);
             var drownCards = new List<OwnedPlayerCard>();
 
             foreach (var card in deck.Draw(number, cardType))
@@ -94,14 +98,35 @@ namespace CardProject.PlayerData
 
         public override void AddNewCard(string title, int number)
         {
-            base.AddNewCard(title, number);
-            RefreshHand();
+            number = RestrictAddNumber(number);
+
+            if (number > 0)
+            {
+                base.AddNewCard(title, number);
+                RefreshHand();
+            }
         }
 
         public override void AddCard(OwnedPlayerCard card)
         {
-            base.AddCard(card);
-            card.State = OwnedPlayerCardState.InHand;
+            if (!HasMaximumCards())
+            {
+                base.AddCard(card);
+                card.State = OwnedPlayerCardState.InHand;
+            }
+        }
+
+        private bool HasMaximumCards()
+        {
+            return collection.Count >= handLimit;
+        }
+
+        private int RestrictAddNumber(int number)
+        {
+            if (collection.Count + number > handLimit)
+                return number - (collection.Count + number - handLimit);
+
+            return number;
         }
 
         private Vector3 HandVector
