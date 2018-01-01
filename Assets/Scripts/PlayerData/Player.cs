@@ -86,12 +86,14 @@ namespace CardProject.PlayerData
         {
             AddValueWithMinMaxCheck(ref currentLearning, delta, minLearning, maxLearning);
             UpdateGUI();
+            LearningPool.RefreshHighlight();
         }
 
         public void ResetLearning()
         {
             currentLearning = resetLearning;
             UpdateGUI();
+            LearningPool.RefreshHighlight();
         }
 
         public bool CanLearn(int learningCost)
@@ -144,13 +146,14 @@ namespace CardProject.PlayerData
         {
             AddValueWithMinMaxCheck(ref currentAction, delta, minAction, maxAction);
             UpdateGUI();
-            Hand.RefreshHightlight();
+            Hand.RefreshHighlight();
         }
 
         public void ResetAction()
         {
             currentAction = resetAction;
             UpdateGUI();
+            Hand.RefreshHighlight();
         }
 
         public bool CanPlayAction(int actionCost)

@@ -36,7 +36,7 @@ namespace CardProject.PlayerData
             }
 
             RefreshHand(drownCards);
-            RefreshHightlight();
+            RefreshHighlight();
 
             foreach (var card in drownCards)            
                 card.ExecuteDrawEffects();            
@@ -154,10 +154,10 @@ namespace CardProject.PlayerData
             }
         }
 
-        public void RefreshHightlight()
+        public void RefreshHighlight()
         {
-            foreach (var card in collection)            
-                card.PlayerCard.ChangeHighlightPlayable(card.IsCardPlayable());           
+            foreach (var card in collection)
+                card.PlayerCard.ChangeHighlightPlayable(card.IsCardPlayable());
         }
     }
 }

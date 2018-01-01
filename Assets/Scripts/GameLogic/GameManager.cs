@@ -96,7 +96,10 @@ namespace CardProject.GameLogic
             currentTurnPhase.ActivatePhase();
 
             foreach (var player in players)
-                player.Hand.RefreshHightlight();
+            {
+                player.Hand.RefreshHighlight();
+                player.LearningPool.RefreshHighlight();
+            }
         }
 
         public bool IsCardPlayable(OwnedPlayerCard card)

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using CardProject.GameLogic;
+using CardProject.Gui;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace CardProject.Cards
@@ -23,9 +25,46 @@ namespace CardProject.Cards
             GetComponent<EventTrigger>().triggers.Add(entry);
         }
 
+        private void LearnCard()
+        {
+            string unlearnableReason;
+
+            if (IsCardLearnable(out unlearnableReason))
+            {
+                LearningPool.Player.Deck.AddNewCard(PlayerCard.Type.Title, 1);
+                LearningPool.Player.AddLearning(-PlayerCard.Type.LearningCost);
+            }
+            else
+                GuiManager.Instance.ShowFadeOutText(unlearnableReason);
+        }
+
+        private bool IsCardLearnable(out string unlearnableReason)
+        {
+            if (GameManager.Instance.CanLearn())
+            {
+                if (LearningPool.Player.CanLearn(PlayerCard.Type.LearningCost))
+                {
+                    unlearnableReason = string.Empty;
+                    return true;
+                }
+                else
+                    unlearnableReason = "You don't have enough Learning!";
+            }
+            else
+                unlearnableReason = "Card's not learnable in this phase!";
+
+            return false;
+        }
+
+        public bool IsCardLearnable()
+        {
+            string unlearnableReason;
+            return IsCardLearnable(out unlearnableReason);
+        }
+
         public void PointerClick()
         {
-            LearningPool.LearnCard(PlayerCard.Type);
+            LearnCard();
         }
 
         public void Show()
